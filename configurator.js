@@ -193,7 +193,7 @@ class DoorConfigurator {
 
     this.canvasContainer.innerHTML = `
       ${bgImageHTML}
-      <div class="canvas-wrapper" style="transform: scale(${this.state.doorScale}) translate(${this.state.doorOffsetX}px, ${this.state.doorOffsetY}px);">
+      <div class="canvas-wrapper" style="max-width: 90%; max-height: 90%; margin: auto; transform: scale(${this.state.doorScale}) translate(${this.state.doorOffsetX}px, ${this.state.doorOffsetY}px);">
         ${svgHTML}
       </div>
     `;
