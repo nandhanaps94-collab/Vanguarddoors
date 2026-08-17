@@ -220,9 +220,11 @@ class AppRouter {
               <h1 class="section-title">${routeObj.name}</h1>
               <p class="section-subtitle">Engineered for home improvement excellence across Britain.</p>
             </div>
-            <div style="background: var(--bg-white); border: 1px solid var(--border-subtle); padding: 3rem; border-radius: 12px; text-align: center;">
-              <a href="#/doors" class="btn btn-primary">Browse Door Collection</a>
-              <a href="#/door-designer" class="btn btn-secondary" style="margin-left: 1rem;">Launch 3D Designer</a>
+            <div style="background: var(--bg-white); border: 1px solid var(--border-subtle); padding: 3rem 1.5rem; border-radius: 12px; text-align: center;">
+              <div style="display: flex; flex-wrap: wrap; gap: 1rem; max-width: 500px; margin: 0 auto; justify-content: center;">
+                <a href="#/doors" class="btn btn-primary" style="flex: 1; min-width: 200px;">Browse Door Collection</a>
+                <a href="#/door-designer" class="btn btn-secondary" style="flex: 1; min-width: 200px;">Launch 3D Designer</a>
+              </div>
             </div>
           </div>
         </section>

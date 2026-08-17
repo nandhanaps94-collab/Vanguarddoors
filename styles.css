@@ -1906,6 +1906,7 @@ html, body {
   }
   .btn {
     width: 100%;
+    margin-left: 0 !important;
     text-align: center;
     justify-content: center;
   }
