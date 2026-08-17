@@ -1737,6 +1737,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Responsive Overrides */
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE SYSTEM (< 768px & < 480px)
+   ========================================================================== */
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 @media (max-width: 1200px) {
   .journey-grid,
   .products-grid,
@@ -1755,13 +1764,76 @@ h1, h2, h3, h4, h5, h6 {
   .mobile-toggle {
     display: block;
   }
+  
+  .top-nav-bar {
+    padding: 0.4rem 0;
+  }
+  .top-nav-container {
+    flex-direction: column;
+    gap: 0.35rem;
+    align-items: flex-start;
+  }
+  .top-nav-links {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.25rem;
+    font-size: 0.75rem;
+  }
+  .top-nav-links::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .hero-header-container {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .brand-logo {
+    font-size: 1.125rem;
+  }
+  .header-actions {
+    gap: 0.5rem;
+  }
+  .header-actions .btn {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
+  }
+  
+  .hero-section {
+    height: auto;
+    min-height: 440px;
+    padding: 5rem 1rem 3rem;
+  }
+  .hero-title {
+    font-size: clamp(1.85rem, 6vw, 2.5rem);
+  }
+  .hero-subhead {
+    font-size: 0.875rem;
+  }
+  
+  .configurator-studio {
+    flex-direction: column;
+    height: auto;
+  }
+  .preview-stage {
+    height: 360px;
+    min-height: 320px;
+  }
+  .config-controls {
+    width: 100%;
+    max-height: none;
+  }
+  
   .journey-grid,
   .products-grid,
   .process-grid,
   .security-tech-grid,
   .case-studies-grid,
   .reviews-grid,
-  .trust-grid {
+  .trust-grid,
+  .gallery-masonry {
     grid-template-columns: 1fr;
   }
   .featured-grid,
@@ -1770,19 +1842,31 @@ h1, h2, h3, h4, h5, h6 {
   }
   .footer-columns {
     grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
-  .gallery-masonry {
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .header-actions .btn-dark-outline {
+    display: none; /* Hide secondary button on small phones to preserve clean header layout */
+  }
+  .footer-columns {
     grid-template-columns: 1fr;
   }
-  .hero-section {
-    height: 560px;
-    min-height: 520px;
-    padding-bottom: 3rem;
+  .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
-  .hero-title {
-    font-size: 2.125rem;
+  .product-card-footer {
+    flex-direction: column;
+    gap: 0.5rem;
   }
-  .hero-subhead {
-    font-size: 0.9375rem;
+  .product-card-footer .btn {
+    width: 100%;
   }
 }
