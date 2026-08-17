@@ -1844,17 +1844,44 @@ html, body {
     font-size: 0.875rem;
   }
   
+  .configurator-section {
+    padding: 4rem 0 3rem;
+  }
   .configurator-studio {
-    flex-direction: column;
-    height: auto;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
   }
   .preview-stage {
-    height: 360px;
-    min-height: 320px;
+    position: relative;
+    overflow: hidden;
+    height: 460px;
+    min-height: 420px;
+    padding: 3.25rem 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .canvas-wrapper {
+    width: 200px;
+    height: 370px;
+    max-height: 370px;
+    max-width: 75vw;
+    margin: 0 auto;
+  }
+  .upload-house-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.7rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: var(--radius-pill);
+    z-index: 20;
   }
   .config-controls {
     width: 100%;
     max-height: none;
+    padding: 2rem 1.25rem;
+    border-left: none;
+    border-top: 1px solid var(--border-subtle);
   }
   
   .journey-grid,
@@ -1878,6 +1905,26 @@ html, body {
 }
 
 @media (max-width: 480px) {
+  .configurator-section {
+    padding: 3rem 0 2rem;
+  }
+  .preview-stage {
+    height: 420px;
+    min-height: 380px;
+    padding: 3rem 0.5rem 1rem;
+  }
+  .canvas-wrapper {
+    width: 180px;
+    height: 330px;
+    max-height: 330px;
+    max-width: 80vw;
+  }
+  .upload-house-btn {
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.65rem;
+    padding: 0.3rem 0.55rem;
+  }
   .hero-header-overlay {
     top: 8px;
     padding: 0 10px;
