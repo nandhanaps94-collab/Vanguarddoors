@@ -63,7 +63,9 @@ class AppRouter {
       '/door-finder': { title: 'Interactive Door Style Finder Tool | Vanguard Doors', type: 'page', category: 'finder', name: 'Interactive Door Style Finder' },
       '/door-designer': { title: '3D Interactive Door Designer | Vanguard Doors', type: 'page', category: 'designer', name: '3D Door Designer Studio' },
       '/about': { title: 'About Vanguard Doors | British Engineering Heritage', type: 'page', category: 'about', name: 'About Vanguard Composite Doors' },
-      '/contact': { title: 'Contact Us | Vanguard Doors Support', type: 'page', category: 'contact', name: 'Contact Vanguard Customer Service' }
+      '/contact': { title: 'Contact Us | Vanguard Doors Support', type: 'page', category: 'contact', name: 'Contact Vanguard Customer Service' },
+      '/privacy-policy': { title: 'Privacy Policy | Vanguard Composite Doors', type: 'page', category: 'legal', name: 'Privacy Policy' },
+      '/terms-and-conditions': { title: 'Terms & Conditions | Vanguard Composite Doors', type: 'page', category: 'legal', name: 'Terms & Conditions' }
     };
 
     this.init();
@@ -211,6 +213,10 @@ class AppRouter {
       pageHTML = this.renderAboutPage();
     } else if (path === '/contact') {
       pageHTML = this.renderContactPage();
+    } else if (path === '/privacy-policy') {
+      pageHTML = this.renderPrivacyPolicyPage();
+    } else if (path === '/terms-and-conditions') {
+      pageHTML = this.renderTermsPage();
     } else {
       pageHTML = `
         <section class="journey-section" style="padding-top: 5rem;">
@@ -1680,6 +1686,50 @@ class AppRouter {
             <textarea placeholder="How can we help?" rows="5" required style="padding: 1rem; border-radius: 4px; border: 1px solid var(--border-subtle); background: var(--bg-main);"></textarea>
             <button type="submit" class="btn btn-primary">Send Message</button>
           </form>
+        </div>
+      </section>
+    `;
+  }
+
+  renderPrivacyPolicyPage() {
+    return `
+      <section style="padding: 5rem 0; background: var(--bg-main);">
+        <div class="container" style="max-width: 800px;">
+          <div class="section-header">
+            <span class="eyebrow">LEGAL DOCUMENTATION</span>
+            <h1 class="section-title" style="font-size: 3rem;">Privacy Policy</h1>
+            <p class="section-subtitle">Last updated: August 2026. Vanguard Composite Doors Ltd.</p>
+          </div>
+          <div style="background: var(--bg-white); border: 1px solid var(--border-subtle); padding: 3rem; border-radius: 16px; box-shadow: var(--shadow-subtle); line-height: 1.8; color: var(--text-secondary);">
+            <h3 style="color: var(--text-primary); margin-bottom: 0.75rem;">1. Data Collection & Usage</h3>
+            <p style="margin-bottom: 1.5rem;">Vanguard Composite Doors Ltd respects your privacy. When you request a home survey, installer quote, or custom 3D door design, we process your contact details and postcode strictly to fulfill your customer inquiry.</p>
+            <h3 style="color: var(--text-primary); margin-bottom: 0.75rem;">2. Security & Data Protection</h3>
+            <p style="margin-bottom: 1.5rem;">Your personal details are stored using end-to-end encryption compliant with UK GDPR regulations. We do not sell or rent customer data to third-party advertisers.</p>
+            <h3 style="color: var(--text-primary); margin-bottom: 0.75rem;">3. Approved Installer Network</h3>
+            <p style="margin-bottom: 1.5rem;">If you request an official fitting quote, your information is shared exclusively with certified Vanguard master installers operating within your local region.</p>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  renderTermsPage() {
+    return `
+      <section style="padding: 5rem 0; background: var(--bg-main);">
+        <div class="container" style="max-width: 800px;">
+          <div class="section-header">
+            <span class="eyebrow">TERMS OF SERVICE</span>
+            <h1 class="section-title" style="font-size: 3rem;">Terms & Conditions</h1>
+            <p class="section-subtitle">Vanguard Composite Doors Ltd Terms of Business & Guarantees.</p>
+          </div>
+          <div style="background: var(--bg-white); border: 1px solid var(--border-subtle); padding: 3rem; border-radius: 16px; box-shadow: var(--shadow-subtle); line-height: 1.8; color: var(--text-secondary);">
+            <h3 style="color: var(--text-primary); margin-bottom: 0.75rem;">1. Product Specifications & Guarantees</h3>
+            <p style="margin-bottom: 1.5rem;">All Vanguard composite door slabs, frames, glass units and multi-point locking mechanisms are backed by a comprehensive 10-year manufacturer warranty against bowing, warping, and UV discolouration.</p>
+            <h3 style="color: var(--text-primary); margin-bottom: 0.75rem;">2. Installation & Surveys</h3>
+            <p style="margin-bottom: 1.5rem;">Technical site surveys and final fitting contracts are performed by independent certified local installers. Final survey measurements ensure exact millimeter custom fabrication.</p>
+            <h3 style="color: var(--text-primary); margin-bottom: 0.75rem;">3. Intellectual Property</h3>
+            <p style="margin-bottom: 1.5rem;">All design assets, 3D configurator models, trademark branding, and technical CAD drawings remain the exclusive property of Vanguard Composite Doors Ltd.</p>
+          </div>
         </div>
       </section>
     `;
