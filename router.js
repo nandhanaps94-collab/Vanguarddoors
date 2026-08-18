@@ -171,11 +171,11 @@ class AppRouter {
       pageHTML = this.renderModernDoorsPage();
     } else if (path === '/traditional-doors' || path === '/styles/traditional') {
       pageHTML = this.renderTraditionalDoorsPage();
-    } else if (path === '/front-doors') {
+    } else if (path === '/front-doors' || path.includes('front')) {
       pageHTML = this.renderDoorsPage(routeObj, '/doors/front-doors');
-    } else if (path === '/back-doors') {
+    } else if (path === '/back-doors' || path.includes('back')) {
       pageHTML = this.renderDoorsPage(routeObj, '/doors/back-doors');
-    } else if (path === '/double-doors') {
+    } else if (path === '/double-doors' || path.includes('double')) {
       pageHTML = this.renderDoorsPage(routeObj, '/doors/double-doors');
     } else if (path === '/french-doors' || path.includes('french')) {
       pageHTML = this.renderDoorsPage(routeObj, '/doors/french-doors');
@@ -561,7 +561,7 @@ class AppRouter {
       return this.renderProductDetailPage(routeObj);
     }
 
-    if (path === '/doors/front-doors' || path === '/front-doors') {
+    if (path === '/doors/front-doors' || path === '/front-doors' || path.includes('front')) {
       return `
         <!-- FRONT DOOR DEDICATED PHOTOGRAPHIC HERO SECTION -->
         <section class="hero-section" style="height: 480px; min-height: 420px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
@@ -760,7 +760,7 @@ class AppRouter {
       `;
     }
 
-    if (path === '/doors/back-doors' || path === '/back-doors') {
+    if (path === '/doors/back-doors' || path === '/back-doors' || path.includes('back')) {
       return `
         <!-- BACK DOOR DEDICATED PHOTOGRAPHIC HERO SECTION -->
         <section class="hero-section" style="height: 480px; min-height: 420px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
@@ -965,7 +965,7 @@ class AppRouter {
       `;
     }
 
-    if (path === '/doors/double-doors' || path === '/double-doors') {
+    if (path === '/doors/double-doors' || path === '/double-doors' || path.includes('double')) {
       return `
         <!-- DOUBLE DOOR DEDICATED PHOTOGRAPHIC HERO SECTION -->
         <section class="hero-section" style="height: 480px; min-height: 420px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
@@ -1667,6 +1667,9 @@ class AppRouter {
                   </div>
                 </div>
 
+              </div>
+            </div>
+          </div>
         </section>
       `;
     }
