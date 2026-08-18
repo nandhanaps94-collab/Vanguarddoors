@@ -3213,9 +3213,9 @@ html, body {
   }
 }
 
-@media (max-width: 650px) {
-  .composite-doors-grid-top,
-  .composite-doors-grid-bottom {
+@media (max-width: 900px) {
+  .what-are-composite-grid {
     grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
   }
 }

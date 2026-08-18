@@ -1095,6 +1095,43 @@ class AppRouter {
             </div>
           </div>
         </section>
+
+        <!-- WHAT ARE COMPOSITE DOORS SECTION (ROCKDOOR EXACT BENCHMARK SCREENSHOT 1) -->
+        <section class="what-are-composite-section" style="padding: 5.5rem 0 6.5rem; background-color: var(--bg-main); border-top: 1px solid var(--border-subtle);">
+          <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;" class="what-are-composite-grid">
+              <!-- LEFT CONTENT -->
+              <div>
+                <h2 style="font-family: var(--font-sans); font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 400; color: var(--text-primary); margin-bottom: 1.75rem; line-height: 1.15;">
+                  What are Composite Doors?
+                </h2>
+                
+                <p style="font-family: var(--font-sans); font-size: 0.9375rem; line-height: 1.65; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                  Composite doors have become increasingly popular among homeowners due to their numerous advantages over traditional wooden, uPVC, or metal doors. These include the many security features built into them to keep your home secure, along with the increased energy efficiency to help lower your bills.
+                </p>
+                
+                <p style="font-family: var(--font-sans); font-size: 0.9375rem; line-height: 1.65; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                  Another benefit is the minimal maintenance requirements over some other types of doors. No more painting or varnishing is required, and they can easily be cleaned with soap and water.
+                </p>
+                
+                <p style="font-family: var(--font-sans); font-size: 0.9375rem; line-height: 1.65; color: var(--text-secondary); margin-bottom: 2rem;">
+                  <strong style="text-decoration: underline; color: var(--text-primary);">A typical composite door</strong> in the UK can be made of a mixture of materials such as GRP, Timber and PU Foam, all of which aim to reduce the amount of warm air escaping and cold air entering a property. Rather than using timber, which often swells and bows, a Rockdoor uses a high-density core which is 60% stronger than standard composite doors.
+                </p>
+                
+                <div>
+                  <a href="#3d-designer" class="btn" style="background: #FFFFFF; border: 1.5px solid #18191B; color: #18191B; font-weight: 700; font-family: var(--font-sans); padding: 0.75rem 1.65rem; border-radius: 4px; text-decoration: none; display: inline-block; font-size: 0.875rem;">
+                    Design Your Composite Door
+                  </a>
+                </div>
+              </div>
+
+              <!-- RIGHT IMAGE -->
+              <div style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                <img src="assets/what_are_composite_doors.jpg" alt="What are Composite Doors Interior Entrance" style="width: 100%; height: auto; display: block; object-fit: cover;" />
+              </div>
+            </div>
+          </div>
+        </section>
       `;
     }
 
