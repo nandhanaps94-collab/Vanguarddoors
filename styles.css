@@ -1597,12 +1597,159 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   3D DOOR DESIGNER (Main Warm Off-White Section)
+/* ==========================================================================
+   3D DOOR DESIGNER LAUNCH SECTION (ROCKDOOR SCREENSHOT 2 EXACT MATCH)
    ========================================================================== */
+.designer-section-rockdoor,
 .configurator-section {
-  padding: 7rem 0;
+  padding: 5rem 0;
   background-color: var(--bg-main);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.designer-grid-rockdoor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: clamp(1.5rem, 5vw, 6rem);
+}
+
+.designer-content-col {
+  padding: 2rem 0;
+}
+
+.designer-title-text {
+  font-family: var(--font-sans);
+  font-size: clamp(2.25rem, 3.8vw, 3.5rem);
+  font-weight: 300;
   color: var(--text-primary);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.designer-title-text .highlight-bold {
+  font-weight: 700;
+  display: block;
+}
+
+.designer-subtitle-text {
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  font-weight: 400;
+  margin-bottom: 2.25rem;
+  max-width: 520px;
+}
+
+.btn-start-designing {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: #7c3aed;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.9rem 2.25rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.35);
+  transition: background 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.btn-start-designing:hover {
+  background: #6d28d9;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(124, 58, 237, 0.45);
+}
+
+.btn-start-designing .btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.btn-start-designing:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.designer-steps-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.designer-step-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.designer-step-num {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #7c3aed;
+  margin-bottom: 0.5rem;
+}
+
+.designer-step-title {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.designer-step-desc {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.designer-image-col {
+  height: 580px;
+  width: 100%;
+  border-radius: 16px 0 0 16px;
+  overflow: hidden;
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.designer-tablet-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.designer-image-col:hover .designer-tablet-img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 992px) {
+  .designer-grid-rockdoor {
+    grid-template-columns: 1fr;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    gap: 2.5rem;
+  }
+  .designer-image-col {
+    height: 400px;
+    border-radius: 12px;
+  }
+  .designer-steps-row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
 }
 
 .configurator-studio {

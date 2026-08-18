@@ -7,7 +7,7 @@
   <meta name="description" content="Rockdoor is a leading UK manufacturer of premium composite doors, offering unmatched security, style and thermal performance. Find your ideal door now.">
   
   <!-- CSS Design System -->
-  <link rel="stylesheet" href="styles.css?v=7.0.0">
+  <link rel="stylesheet" href="styles.css?v=8.0.0">
 </head>
 <body>
 
@@ -675,110 +675,54 @@
     </section>
 
     <!-- ==========================================================================
-         11. 3D DOOR DESIGNER (CONFIGURATOR STUDIO)
+         11. 3D DOOR DESIGNER (MATCHING ROCKDOOR BENCHMARK SCREENSHOT 2)
          ========================================================================== -->
-    <section id="3d-designer" class="configurator-section">
-      <div class="container">
-        <div class="section-header" style="text-align: center; max-width: 720px; margin: 0 auto;">
-          <span class="eyebrow">INTERACTIVE CONFIGURATOR</span>
-          <h2 class="section-title">See your door before you buy it.</h2>
-          <p class="section-subtitle">Choose your style, colour, glass and finishing touches — then preview your design in real time.</p>
-        </div>
+    <section id="3d-designer" class="designer-section-rockdoor">
+      <div class="container-fluid padding-zero">
+        <div class="designer-grid-rockdoor">
+          <!-- LEFT COLUMN: CONTENT & FEATURES -->
+          <div class="designer-content-col">
+            <span class="eyebrow" style="color: var(--text-muted); font-size: 0.75rem; display: block; margin-bottom: 0.5rem; letter-spacing: 0.15em;">ROCKDOOR 3D DOOR DESIGNER</span>
+            
+            <h2 class="designer-title-text">
+              See your Rockdoor on your house <span class="highlight-bold">before you buy it.</span>
+            </h2>
+            
+            <p class="designer-subtitle-text">
+              Every style, every colour, every piece of glass — built in 3D from your sofa, then dropped onto a photo of your own front of house.
+            </p>
 
-        <div class="configurator-studio">
-          <!-- Canvas Preview Stage -->
-          <div class="preview-stage">
-            <button class="upload-house-btn" onclick="document.getElementById('house-photo-input').click()">
-              📷 Upload Your Home Photo
-            </button>
-            <input type="file" id="house-photo-input" accept="image/*" style="display: none;" />
+            <div style="margin-bottom: 3rem;">
+              <a href="#/door-designer" class="btn-start-designing">
+                <span>Start designing</span>
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
 
-            <!-- Dynamic Render Canvas Container -->
-            <div id="config-canvas-container" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-              <!-- Dynamically populated by configurator.js -->
+            <div class="designer-steps-row">
+              <div class="designer-step-col">
+                <span class="designer-step-num">01</span>
+                <h4 class="designer-step-title">Pick your style</h4>
+                <p class="designer-step-desc">Every door in the range, modern and traditional.</p>
+              </div>
+
+              <div class="designer-step-col">
+                <span class="designer-step-num">02</span>
+                <h4 class="designer-step-title">Try every finish</h4>
+                <p class="designer-step-desc">Fourteen colours, glass designs and furniture.</p>
+              </div>
+
+              <div class="designer-step-col">
+                <span class="designer-step-num">03</span>
+                <h4 class="designer-step-title">See it on your home</h4>
+                <p class="designer-step-desc">Upload a photo and view the door in place.</p>
+              </div>
             </div>
           </div>
 
-          <!-- Controls Panel -->
-          <div id="config-controls-container" class="config-controls">
-            
-            <!-- DOOR STYLE -->
-            <div>
-              <div class="config-group-title">1. Door Style</div>
-              <div class="option-grid">
-                <div class="option-card selected" onclick="window.doorConfigurator?.setState('style','arden'); document.querySelectorAll('.option-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
-                  <strong>Arden</strong><br><span style="font-size: 0.75rem; color: #94a3b8;">Modern Linear</span>
-                </div>
-                <div class="option-card" onclick="window.doorConfigurator?.setState('style','windsor'); document.querySelectorAll('.option-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
-                  <strong>Windsor</strong><br><span style="font-size: 0.75rem; color: #94a3b8;">Traditional Arch</span>
-                </div>
-                <div class="option-card" onclick="window.doorConfigurator?.setState('style','malvern'); document.querySelectorAll('.option-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
-                  <strong>Malvern</strong><br><span style="font-size: 0.75rem; color: #94a3b8;">Cottage Plank</span>
-                </div>
-                <div class="option-card" onclick="window.doorConfigurator?.setState('style','heritage'); document.querySelectorAll('.option-card').forEach(c=>c.classList.remove('selected')); this.classList.add('selected');">
-                  <strong>Heritage</strong><br><span style="font-size: 0.75rem; color: #94a3b8;">Stable Split</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- COLOUR -->
-            <div>
-              <div class="config-group-title">2. Exterior Colour</div>
-              <div class="color-swatch-grid">
-                <div class="color-swatch-item selected" onclick="window.doorConfigurator?.setState('color','anthracite');">
-                  <div class="swatch-circle" style="background: #2f353b;"></div>
-                  <span class="swatch-name">Anthracite</span>
-                </div>
-                <div class="color-swatch-item" onclick="window.doorConfigurator?.setState('color','black');">
-                  <div class="swatch-circle" style="background: #18191b;"></div>
-                  <span class="swatch-name">Black</span>
-                </div>
-                <div class="color-swatch-item" onclick="window.doorConfigurator?.setState('color','agate');">
-                  <div class="swatch-circle" style="background: #7d847c;"></div>
-                  <span class="swatch-name">Agate</span>
-                </div>
-                <div class="color-swatch-item" onclick="window.doorConfigurator?.setState('color','chartwell');">
-                  <div class="swatch-circle" style="background: #7a967f;"></div>
-                  <span class="swatch-name">Chartwell</span>
-                </div>
-                <div class="color-swatch-item" onclick="window.doorConfigurator?.setState('color','irish_oak');">
-                  <div class="swatch-circle" style="background: #b57f49;"></div>
-                  <span class="swatch-name">Irish Oak</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- GLASS -->
-            <div>
-              <div class="config-group-title">3. Glazing Pattern</div>
-              <div class="option-grid">
-                <div class="option-card selected" onclick="window.doorConfigurator?.setState('glass','diamond');">Diamond Bevel</div>
-                <div class="option-card" onclick="window.doorConfigurator?.setState('glass','horizon');">Horizon Etched</div>
-                <div class="option-card" onclick="window.doorConfigurator?.setState('glass','satin');">Satin Privacy</div>
-                <div class="option-card" onclick="window.doorConfigurator?.setState('glass','clear');">Clear Vision</div>
-              </div>
-            </div>
-
-            <!-- HARDWARE -->
-            <div>
-              <div class="config-group-title">4. Furniture & Hardware</div>
-              <div class="option-grid">
-                <div class="option-card selected" onclick="window.doorConfigurator?.setState('hardware','chrome');">Chrome</div>
-                <div class="option-card" onclick="window.doorConfigurator?.setState('hardware','black');">Matt Black</div>
-                <div class="option-card" onclick="window.doorConfigurator?.setState('hardware','brass');">Antique Brass</div>
-                <div class="option-card" onclick="window.doorConfigurator?.setState('hardware','satin');">Brushed Satin</div>
-              </div>
-            </div>
-
-            <!-- ESTIMATED PRICE & CTAS -->
-            <div style="padding-top: 1.5rem; border-top: 1px solid var(--border-dark);">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                <span style="font-size: 0.875rem; color: var(--text-light-muted);">Est. Supply & Fit Range:</span>
-                <span id="config-price-display" style="font-size: 1.5rem; font-weight: 700; color: var(--accent-gold);">£1,250 - £1,420</span>
-              </div>
-              <button class="btn btn-gold" onclick="window.requestQuoteFromInstaller('Vanguard Direct Partner')" style="width: 100%;">Get Official Installation Quote</button>
-            </div>
-
+          <!-- RIGHT COLUMN: TABLET LIFESTYLE PHOTO -->
+          <div class="designer-image-col">
+            <img src="assets/rockdoor_3d_tablet.jpg" alt="Designing Rockdoor in 3D on Tablet" class="designer-tablet-img" />
           </div>
         </div>
       </div>
@@ -1143,9 +1087,9 @@
   </footer>
 
   <!-- JavaScript Libraries & App Engine -->
-  <script src="configurator.js?v=7.0.0"></script>
-  <script src="router.js?v=7.0.0"></script>
-  <script src="app.js?v=7.0.0"></script>
+  <script src="configurator.js?v=8.0.0"></script>
+  <script src="router.js?v=8.0.0"></script>
+  <script src="app.js?v=8.0.0"></script>
 
 </body>
 </html>
