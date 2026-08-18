@@ -181,7 +181,7 @@ class AppRouter {
       pageHTML = this.renderDoorsPage(routeObj, '/doors/french-doors');
     } else if (path === '/stable-doors' || path.includes('stable')) {
       pageHTML = this.renderDoorsPage(routeObj, '/doors/stable-doors');
-    } else if (path === '/cottage-doors') {
+    } else if (path === '/cottage-doors' || path.includes('cottage')) {
       pageHTML = this.renderDoorsPage(routeObj, '/doors/cottage-doors');
     } else if (path.startsWith('/doors') || path.startsWith('/composite')) {
       pageHTML = this.renderDoorsPage(routeObj, path);
@@ -1663,6 +1663,210 @@ class AppRouter {
                   <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
                     <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
                       Awarded top security ratings with multi-point hook locking on both upper and lower sashes.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+    if (path === '/doors/cottage-doors' || path === '/cottage-doors' || path.includes('cottage')) {
+      return `
+        <!-- COTTAGE DOOR DEDICATED PHOTOGRAPHIC HERO SECTION -->
+        <section class="hero-section" style="height: 480px; min-height: 420px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
+          <div class="hero-bg" style="position: absolute; inset: 0; z-index: 1;">
+            <img src="assets/collection_malvern.jpg" alt="Rustic Cottage Composite Front Door with Stone Surround" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;" />
+          </div>
+          <div class="hero-overlay" style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.30) 60%, rgba(0,0,0,0.65) 100%); z-index: 2;"></div>
+
+          <div class="container" style="position: relative; z-index: 10; text-align: center; max-width: 800px; color: #FFFFFF;">
+            <span class="eyebrow" style="color: var(--accent-gold); letter-spacing: 0.18em; font-weight: 700; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">RUSTIC & HERITAGE COLLECTION</span>
+            <h1 class="hero-title" style="font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 0.75rem; color: #FFFFFF; font-family: var(--font-heading); text-shadow: 0 2px 8px rgba(0,0,0,0.7);">Cottage Doors</h1>
+            <p class="hero-subhead" style="font-size: 1.125rem; color: rgba(255,255,255,0.92); max-width: 660px; margin: 0 auto 1.75rem; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">
+              Authentic rustic charm featuring deep vertical tongue and groove planking, realistic woodgrain texture and high-performance composite insulation.
+            </p>
+          </div>
+        </section>
+
+        <!-- TOP CATEGORY TABS BAR -->
+        <div class="category-tabs-bar-rockdoor" style="padding: 1.5rem 0; background: var(--bg-main); border-bottom: 1px solid var(--border-subtle);">
+          <div class="container">
+            <div style="display: flex; gap: 2.25rem; overflow-x: auto; white-space: nowrap; scrollbar-width: none;">
+              <a href="#/front-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Front Doors</a>
+              <a href="#/back-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Back Doors</a>
+              <a href="#/french-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">French Doors</a>
+              <a href="#/double-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Double Doors</a>
+              <a href="#/stable-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Stable Doors</a>
+              <a href="#/cottage-doors" class="cat-tab-link active" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 700; color: var(--text-primary); text-decoration: none; border-bottom: 2px solid var(--text-primary); padding-bottom: 0.4rem;">Cottage Doors</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 COTTAGE DOOR PHOTO CARDS GRID -->
+        <section class="products-section" style="padding: 3.5rem 0 4rem; background-color: var(--bg-main);">
+          <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 1.5rem;" class="front-doors-grid-photo">
+              
+              <!-- CARD 1: Cottage View Light -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/heritage'">
+                <img src="assets/inspiration_2.jpg" class="inspiration-card-img" alt="Cottage View Light" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Cottage</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Cottage View Light</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 2: Cottage Diamond View -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/heritage'">
+                <img src="assets/collection_malvern.jpg" class="inspiration-card-img" alt="Cottage Diamond View" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Cottage</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Cottage Diamond View</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 3: Cottage Solid -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/heritage'">
+                <img src="assets/collection_stable.jpg" class="inspiration-card-img" alt="Cottage Solid" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Cottage</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Cottage Solid</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 4: Cottage Spy View -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/heritage'">
+                <img src="assets/story_victorian.jpg" class="inspiration-card-img" alt="Cottage Spy View" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Cottage</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Cottage Spy View</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- ROW 2: Card 5 (Classic Cottage) -->
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;" class="front-doors-grid-photo">
+              
+              <!-- CARD 5: Classic Cottage -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/heritage'">
+                <img src="assets/collection_windsor.jpg" class="inspiration-card-img" alt="Classic Cottage" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Traditional</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Classic Cottage</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- COTTAGE DOOR FEATURE ACCORDION SECTION -->
+        <section class="cottage-doors-feature-section" style="padding: 5.5rem 0 6.5rem; background-color: var(--bg-main); border-top: 1px solid var(--border-subtle);">
+          <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start;" class="back-doors-feature-grid">
+              
+              <!-- LEFT COLUMN: TITLE & A+ STAT BADGE -->
+              <div>
+                <span class="eyebrow" style="color: var(--text-muted); font-size: 0.75rem; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Composite cottage doors</span>
+                <h2 style="font-family: var(--font-sans); font-size: clamp(2.25rem, 3.8vw, 3.25rem); font-weight: 700; color: var(--text-primary); line-height: 1.15; margin-bottom: 1.5rem;">
+                  Timeless country character,<br />modern composite strength
+                </h2>
+                <p style="font-family: var(--font-sans); font-size: 0.9375rem; line-height: 1.65; color: var(--text-secondary); max-width: 480px; margin-bottom: 2.5rem;">
+                  Capture authentic rustic charm with traditional tongue and groove planking, rich timber grain textures, and uncompromised thermal efficiency.
+                </p>
+
+                <!-- A+ THERMAL RATING STAT BADGE CARD -->
+                <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1.25rem; max-width: 380px; box-shadow: 0 2px 10px rgba(0,0,0,0.04);">
+                  <span style="font-family: var(--font-sans); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); line-height: 1;">A+</span>
+                  <span style="font-family: var(--font-sans); font-size: 0.8125rem; line-height: 1.35; color: var(--text-secondary); font-weight: 500;">thermal efficiency rating for authentic country homes</span>
+                </div>
+              </div>
+
+              <!-- RIGHT COLUMN: INTERACTIVE ACCORDION ITEMS -->
+              <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+                
+                <!-- ACCORDION ITEM 1 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">🏡</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Authentic tongue & groove styling</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Engineered with deep vertical grooves replicating traditional timber plank doors without warping, rotting, or repainting.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ACCORDION ITEM 2 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">🔒</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Heavy-duty multi-point hook locking</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Features solid brass and nickel multi-point hook deadbolts securing your home against intruder attempts.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ACCORDION ITEM 3 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">🎨</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Rich woodgrain & heritage color finishes</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Available in Chartwell Green, Irish Oak, Duck Egg Blue, Warm Walnut, and Agate Grey with realistic wood grain textures.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ACCORDION ITEM 4 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">🌡️</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Draft-free thermal insulation for traditional homes</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Replaces cold drafty timber doors with thick high-density polyurethane insulation and double weather seals.
                     </p>
                   </div>
                 </div>
