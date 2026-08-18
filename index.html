@@ -7,7 +7,7 @@
   <meta name="description" content="Discover beautifully engineered British composite doors. Premium luxury styles, PAS 24 security, thermal A+ efficiency, 3D door designer, and approved nationwide installer network.">
   
   <!-- CSS Design System -->
-  <link rel="stylesheet" href="styles.css?v=2.0.0">
+  <link rel="stylesheet" href="styles.css?v=2.1.0">
 </head>
 <body>
 
@@ -277,62 +277,81 @@
     </section>
 
     <!-- ==========================================================================
-         6. EXPLORE BY STYLE SECTION
+         6. WHAT MATTERS TO YOU SECTION (MATCHING ROCKDOOR BENCHMARK EXACTLY)
          ========================================================================== -->
     <section class="journey-section">
       <div class="container">
-        <div class="section-header">
-          <span class="eyebrow">PERSONALISE YOUR ENTRANCE</span>
-          <h2 class="section-title">Explore by Style</h2>
-          <p class="section-subtitle">Discover our contemporary linear, period traditional, countryside stable, and plank cottage composite door styles.</p>
+        <div class="journey-header-flex">
+          <div>
+            <span class="eyebrow" style="margin-bottom: 0.35rem; display: block; color: var(--text-muted); font-size: 0.75rem;">FIND YOUR VANGUARD</span>
+            <h2 class="journey-title-text">What matters <span class="highlight-bold">to you?</span></h2>
+          </div>
+          <div class="journey-header-subtitle">
+            Start or continue your journey.
+          </div>
         </div>
 
         <div class="journey-grid">
-          <!-- CARD: MODERN DOORS -->
-          <div class="journey-card" onclick="window.location.hash='#/modern-doors'">
-            <img src="assets/composite_doors_hero.jpg" class="journey-card-bg" alt="Modern Doors" />
-            <div class="journey-card-overlay"></div>
-            <div class="journey-card-content">
-              <span class="journey-card-category">CONTEMPORARY DESIGN</span>
-              <h3>MODERN DOORS</h3>
-              <p>Explore sleek linear glass inserts and contemporary geometric proportions.</p>
-              <span class="journey-card-link">Explore Modern Doors →</span>
+          <!-- CARD 1: STYLE -->
+          <div class="journey-card-rockdoor" onclick="window.location.hash='#/doors'">
+            <img src="assets/collection_arden.jpg" class="journey-card-img" alt="Vanguard Door Style" />
+            <div class="journey-card-overlay-gradient"></div>
+            
+            <div class="journey-card-top">
+              <div>
+                <h3 class="journey-card-head">Style</h3>
+                <span class="badge-recommended">RECOMMENDED</span>
+              </div>
+              <span class="journey-card-arrow">→</span>
+            </div>
+            
+            <div class="journey-card-bottom">
+              <p>Explore composite door styles designed to make an entrance.</p>
             </div>
           </div>
 
-          <!-- CARD: TRADITIONAL DOORS -->
-          <div class="journey-card" onclick="window.location.hash='#/traditional-doors'">
-            <img src="assets/collection_windsor.jpg" class="journey-card-bg" alt="Traditional Doors" />
-            <div class="journey-card-overlay"></div>
-            <div class="journey-card-content">
-              <span class="journey-card-category">PERIOD HERITAGE</span>
-              <h3>TRADITIONAL DOORS</h3>
-              <p>Explore classic period arch glazing and elegant twin panel moulding.</p>
-              <span class="journey-card-link">Explore Traditional Doors →</span>
+          <!-- CARD 2: TYPE -->
+          <div class="journey-card-rockdoor" onclick="window.location.hash='#/front-doors'">
+            <img src="assets/collection_windsor.jpg" class="journey-card-img" alt="Vanguard Door Type" />
+            <div class="journey-card-overlay-gradient"></div>
+            
+            <div class="journey-card-top">
+              <h3 class="journey-card-head">Type</h3>
+              <span class="journey-card-arrow">→</span>
+            </div>
+            
+            <div class="journey-card-bottom">
+              <p>Find the right door for every opening, from front and back to French and stable.</p>
             </div>
           </div>
 
-          <!-- CARD: STABLE DOORS -->
-          <div class="journey-card" onclick="window.location.hash='#/stable-doors'">
-            <img src="assets/stable_door_hero.jpg" class="journey-card-bg" alt="Stable Doors" />
-            <div class="journey-card-overlay"></div>
-            <div class="journey-card-content">
-              <span class="journey-card-category">SPLIT SASH VERSATILITY</span>
-              <h3>STABLE DOORS</h3>
-              <p>Independent top ventilation with modern composite thermal insulation.</p>
-              <span class="journey-card-link">Explore Stable Doors →</span>
+          <!-- CARD 3: COLOUR -->
+          <div class="journey-card-rockdoor" onclick="window.location.hash='#/discover/colours'">
+            <img src="assets/modern_doors_hero.jpg" class="journey-card-img" alt="Vanguard Door Colour" />
+            <div class="journey-card-overlay-gradient"></div>
+            
+            <div class="journey-card-top">
+              <h3 class="journey-card-head">Colour</h3>
+              <span class="journey-card-arrow">→</span>
+            </div>
+            
+            <div class="journey-card-bottom">
+              <p>Discover distinctive colours and woodgrain finishes made to complement your home.</p>
             </div>
           </div>
 
-          <!-- CARD: COTTAGE DOORS -->
-          <div class="journey-card" onclick="window.location.hash='#/cottage-doors'">
-            <img src="assets/back_door_hero.png" class="journey-card-bg" alt="Cottage Doors" />
-            <div class="journey-card-overlay"></div>
-            <div class="journey-card-content">
-              <span class="journey-card-category">PERIOD CHARM</span>
-              <h3>COTTAGE DOORS</h3>
-              <p>Authentic tongue & groove vertical planking with diamond glazing inserts.</p>
-              <span class="journey-card-link">Explore Cottage Doors →</span>
+          <!-- CARD 4: SECURITY -->
+          <div class="journey-card-rockdoor" onclick="window.location.hash='#/discover/security'">
+            <img src="assets/hero_composite_door.jpg" class="journey-card-img" alt="Vanguard Door Security" />
+            <div class="journey-card-overlay-gradient"></div>
+            
+            <div class="journey-card-top">
+              <h3 class="journey-card-head">Security</h3>
+              <span class="journey-card-arrow">→</span>
+            </div>
+            
+            <div class="journey-card-bottom">
+              <p>See how strength and advanced security are built into every Vanguard door.</p>
             </div>
           </div>
         </div>
@@ -1027,9 +1046,9 @@
   </footer>
 
   <!-- JavaScript Libraries & App Engine -->
-  <script src="configurator.js?v=2.0.0"></script>
-  <script src="router.js?v=2.0.0"></script>
-  <script src="app.js?v=2.0.0"></script>
+  <script src="configurator.js?v=2.1.0"></script>
+  <script src="router.js?v=2.1.0"></script>
+  <script src="app.js?v=2.1.0"></script>
 
 </body>
 </html>
