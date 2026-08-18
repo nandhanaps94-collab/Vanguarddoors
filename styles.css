@@ -154,18 +154,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Button System */
+/* Button System - Rockdoor Style Rounded Pills */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  padding: 1rem 2.25rem;
+  padding: 0.875rem 2rem;
   font-family: var(--font-display);
-  font-size: 0.9375rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
   transition: all var(--transition-fast);
   cursor: pointer;
   border: 1px solid transparent;
@@ -177,29 +178,36 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--btn-primary-bg);
   color: var(--btn-primary-text);
   border-color: var(--btn-primary-bg);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
 }
 
 .btn-primary:hover,
 .btn-gold:hover {
-  background-color: var(--btn-primary-hover);
+  background-color: #333333;
   color: var(--btn-primary-text);
-  border-color: var(--btn-primary-hover);
+  border-color: #333333;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
 
 .btn-secondary,
 .btn-dark-outline {
   background-color: transparent;
   color: var(--text-primary);
-  border-color: var(--text-primary);
+  border-color: var(--border-medium);
 }
 
 .btn-secondary:hover,
 .btn-dark-outline:hover {
   background-color: var(--text-primary);
   color: var(--text-white);
+  border-color: var(--text-primary);
   transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.6rem 1.4rem;
+  font-size: 0.78125rem;
 }
 
 .btn-icon {
@@ -332,65 +340,71 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-btn-installer {
-  height: 56px;
-  padding: 0 1.5rem;
-  background: rgba(255, 255, 255, 0.92);
+  height: 48px;
+  padding: 0 1.65rem;
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-pill);
   color: var(--text-primary);
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all var(--transition-fast);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
 }
 
 .hero-btn-installer:hover {
   background: #FFFFFF;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
 }
 
 .hero-btn-help {
-  height: 56px;
-  padding: 0 1.75rem;
+  height: 48px;
+  padding: 0 1.65rem;
   background: var(--text-primary);
   border: 1px solid var(--text-primary);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-pill);
   color: #FFFFFF;
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all var(--transition-fast);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
 }
 
 .hero-btn-help:hover {
   background: #333333;
   transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.25);
 }
 
 .hero-btn-hamburger {
-  width: 56px;
-  height: 56px;
-  background: rgba(255, 255, 255, 0.92);
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-pill);
   color: var(--text-primary);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all var(--transition-fast);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
 }
 
 .hero-btn-hamburger:hover {
