@@ -7,7 +7,7 @@
   <meta name="description" content="Rockdoor is a leading UK manufacturer of premium composite doors, offering unmatched security, style and thermal performance. Find your ideal door now.">
   
   <!-- CSS Design System -->
-  <link rel="stylesheet" href="styles.css?v=29.0.0">
+  <link rel="stylesheet" href="styles.css?v=30.0.0">
 </head>
 <body>
 
@@ -1075,6 +1075,37 @@
           </article>
         </div>
       </div>
+    <!-- ==========================================================================
+         FIND YOUR LOCAL ROCKDOOR INSTALLER BANNER (EXACT BENCHMARK MATCH)
+         ========================================================================== -->
+    <section class="find-installer-banner-section" style="padding: 2.5rem 0 4rem; background-color: var(--bg-main);">
+      <div class="container">
+        <div class="find-installer-card" style="background: #252221; border-radius: 12px; padding: 3.5rem 3.5rem; color: #FFFFFF; display: flex; justify-content: space-between; align-items: center; gap: 2.5rem; flex-wrap: wrap; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+          
+          <!-- LEFT COLUMN: HEADING & SUBTITLE -->
+          <div style="flex: 1; min-width: 300px; max-width: 580px;">
+            <h2 style="font-family: var(--font-sans); font-size: clamp(1.75rem, 3.2vw, 2.5rem); font-weight: 300; color: #FFFFFF; line-height: 1.2; margin: 0 0 0.85rem 0;">
+              Find your local <strong style="font-weight: 700; color: #FFFFFF;">Rockdoor installer</strong>
+            </h2>
+            <p style="font-family: var(--font-sans); font-size: 0.9375rem; line-height: 1.6; color: #D1D5DB; margin: 0;">
+              Enter your postcode to find local installers who can help with design choices, pricing, measuring and professional fitting.
+            </p>
+          </div>
+
+          <!-- RIGHT COLUMN: POSTCODE FORM -->
+          <div style="min-width: 320px;" class="find-installer-form-wrap">
+            <span style="font-family: var(--font-sans); font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #A1A1AA; display: block; margin-bottom: 0.6rem;">ENTER YOUR POSTCODE</span>
+            <form onsubmit="event.preventDefault(); window.location.hash='#/installer-finder';" style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
+              <input type="text" placeholder="e.g. LS10 1AB" style="background: #3a3634; border: 1px solid #4a4542; border-radius: 6px; padding: 0.85rem 1.25rem; font-size: 0.9375rem; color: #FFFFFF; width: 220px; outline: none; font-family: var(--font-sans); transition: border-color 0.2s;" onfocus="this.style.borderColor='#8b5cf6'" onblur="this.style.borderColor='#4a4542'" />
+              <button type="submit" style="background: #8b5cf6; color: #FFFFFF; font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; border: none; border-radius: 6px; padding: 0.85rem 1.65rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; transition: background 0.2s ease; white-space: nowrap;" onmouseover="this.style.background='#7c3aed'" onmouseout="this.style.background='#8b5cf6'">
+                <span>Find an installer</span>
+                <span style="font-size: 1.1rem; line-height: 1;">→</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
     </section>
 
   </main>
@@ -1158,9 +1189,9 @@
   </footer>
 
   <!-- JavaScript Libraries & App Engine -->
-  <script src="configurator.js?v=29.0.0"></script>
-  <script src="router.js?v=29.0.0"></script>
-  <script src="app.js?v=29.0.0"></script>
+  <script src="configurator.js?v=30.0.0"></script>
+  <script src="router.js?v=30.0.0"></script>
+  <script src="app.js?v=30.0.0"></script>
 
 </body>
 </html>
