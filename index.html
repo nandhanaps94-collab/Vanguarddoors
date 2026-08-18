@@ -7,7 +7,7 @@
   <meta name="description" content="Rockdoor is a leading UK manufacturer of premium composite doors, offering unmatched security, style and thermal performance. Find your ideal door now.">
   
   <!-- CSS Design System -->
-  <link rel="stylesheet" href="styles.css?v=10.0.0">
+  <link rel="stylesheet" href="styles.css?v=11.0.0">
 </head>
 <body>
 
@@ -886,57 +886,111 @@
     </section>
 
     <!-- ==========================================================================
-         13. COLOUR COLLECTION
+         13. TRUSTPILOT REVIEWS SECTION ("SEE WHAT HOMEOWNERS SAY ABOUT ROCKDOOR")
          ========================================================================== -->
-    <section class="colour-collection-section">
+    <section class="reviews-section-rockdoor">
       <div class="container">
-        <div class="section-header">
-          <span class="eyebrow">ARCHITECTURAL PALETTE</span>
-          <h2 class="section-title">Find Your Perfect Colour</h2>
-          <p class="section-subtitle">Choose a finish designed to complement your home exterior and brickwork.</p>
+        <div class="reviews-header-flex">
+          <div>
+            <span class="eyebrow" style="color: var(--text-muted); font-size: 0.75rem; display: block; margin-bottom: 0.35rem; letter-spacing: 0.15em;">ROCKDOOR REVIEWS</span>
+            <h2 class="reviews-title-text">See what homeowners say about <span class="highlight-bold">Rockdoor</span></h2>
+          </div>
+          <div>
+            <a href="https://www.trustpilot.com" target="_blank" rel="noopener" class="reviews-read-link">Read all reviews</a>
+          </div>
         </div>
 
-        <div class="colour-preview-box">
-          <div class="swatches-grid-full">
-            <div class="swatch-card-full active" data-color-key="anthracite">
-              <div class="swatch-pill-large" style="background: #2f353b;"></div>
-              <span class="swatch-label-large">Anthracite</span>
+        <div class="reviews-container-grid">
+          <!-- LEFT TRUSTPILOT BADGE -->
+          <div class="trustpilot-badge-col">
+            <h3 class="trustpilot-great-text">Great</h3>
+            <div class="trustpilot-stars-box">
+              <span class="tp-star">★</span>
+              <span class="tp-star">★</span>
+              <span class="tp-star">★</span>
+              <span class="tp-star">★</span>
+              <span class="tp-star half">★</span>
             </div>
-            <div class="swatch-card-full" data-color-key="black">
-              <div class="swatch-pill-large" style="background: #18191b;"></div>
-              <span class="swatch-label-large">Midnight Black</span>
-            </div>
-            <div class="swatch-card-full" data-color-key="agate">
-              <div class="swatch-pill-large" style="background: #7d847c;"></div>
-              <span class="swatch-label-large">Agate Grey</span>
-            </div>
-            <div class="swatch-card-full" data-color-key="slate">
-              <div class="swatch-pill-large" style="background: #4b5258;"></div>
-              <span class="swatch-label-large">Slate Grey</span>
-            </div>
-            <div class="swatch-card-full" data-color-key="chartwell">
-              <div class="swatch-pill-large" style="background: #7a967f;"></div>
-              <span class="swatch-label-large">Chartwell</span>
-            </div>
-            <div class="swatch-card-full" data-color-key="duckegg">
-              <div class="swatch-pill-large" style="background: #8da8a6;"></div>
-              <span class="swatch-label-large">Duck Egg</span>
-            </div>
-            <div class="swatch-card-full" data-color-key="irish_oak">
-              <div class="swatch-pill-large" style="background: #b57f49;"></div>
-              <span class="swatch-label-large">Irish Oak</span>
-            </div>
-            <div class="swatch-card-full" data-color-key="rosewood">
-              <div class="swatch-pill-large" style="background: #472217;"></div>
-              <span class="swatch-label-large">Rosewood</span>
+            <p class="trustpilot-based-text">Based on <strong>805 reviews</strong></p>
+            <div class="trustpilot-logo-flex">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#00b67a"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span class="tp-logo-name">Trustpilot</span>
             </div>
           </div>
 
-          <div style="text-align: center; background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-dark);">
-            <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Anti-Fade UV Guarantee</h4>
-            <p style="font-size: 0.875rem; color: var(--text-light-muted); margin-bottom: 1.5rem;">Protected by SVK outer coating to withstand rain, wind and sunlight.</p>
-            <a href="#3d-designer" class="btn btn-gold btn-sm">Try Colour on 3D Door</a>
+          <!-- RIGHT REVIEWS CAROUSEL -->
+          <div class="reviews-carousel-relative">
+            <button class="carousel-arrow left" onclick="scrollReviewsCarousel(-1)" aria-label="Previous">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+
+            <div id="reviews-carousel-track" class="reviews-carousel-track">
+              <!-- Review 1 -->
+              <div class="review-card-rockdoor">
+                <div class="review-stars-row">
+                  <div class="tp-stars-small">★★★★★</div>
+                  <span class="tp-invited-badge">✔ Invited</span>
+                </div>
+                <div class="review-author-info">
+                  <strong class="review-author-name">Mr Samuel Hendricks</strong>
+                  <span class="review-date">• 20 hours ago</span>
+                </div>
+                <h4 class="review-headline">Elite fitting for a top end door</h4>
+                <p class="review-body-text">Elite fitting for a top end door, made the entrance come alive after a recent renovate...</p>
+                <span class="review-experience-date">Experience on 23 Aug 2025</span>
+              </div>
+
+              <!-- Review 2 -->
+              <div class="review-card-rockdoor">
+                <div class="review-stars-row">
+                  <div class="tp-stars-small">★★★★★</div>
+                </div>
+                <div class="review-author-info">
+                  <strong class="review-author-name">Clean Your Ride</strong>
+                  <span class="review-date">• 24 July</span>
+                </div>
+                <h4 class="review-headline">Had a Newark Rock Door installed to...</h4>
+                <p class="review-body-text">Had a Newark Rock Door installed today by Droylsden Glass and it is absolutely superior...</p>
+                <span class="review-experience-date">Experience on 24 Jul 2026</span>
+              </div>
+
+              <!-- Review 3 -->
+              <div class="review-card-rockdoor">
+                <div class="review-stars-row">
+                  <div class="tp-stars-small">★★★★★</div>
+                </div>
+                <div class="review-author-info">
+                  <strong class="review-author-name">Wayne Richards</strong>
+                  <span class="review-date">• 10 July</span>
+                </div>
+                <h4 class="review-headline">My door panel had faded due to buil...</h4>
+                <p class="review-body-text">My door panel had faded due to builders cutting tiles whilst working next door and they replaced it promptly...</p>
+                <span class="review-experience-date">Experience on 24 Jun 2026</span>
+              </div>
+
+              <!-- Review 4 -->
+              <div class="review-card-rockdoor">
+                <div class="review-stars-row">
+                  <div class="tp-stars-small">★★★★★</div>
+                </div>
+                <div class="review-author-info">
+                  <strong class="review-author-name">Hannah</strong>
+                  <span class="review-date">• 10 July</span>
+                </div>
+                <h4 class="review-headline">Love my new doors</h4>
+                <p class="review-body-text">Love my new doors! Look amazing and feel very safe in my new home!</p>
+                <span class="review-experience-date">Experience on 1 Sep 2025</span>
+              </div>
+            </div>
+
+            <button class="carousel-arrow right" onclick="scrollReviewsCarousel(1)" aria-label="Next">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
           </div>
+        </div>
+
+        <div style="margin-top: 1rem; font-size: 0.75rem; color: var(--text-muted);">
+          Showing our 5 star reviews
         </div>
       </div>
     </section>
@@ -1193,9 +1247,9 @@
   </footer>
 
   <!-- JavaScript Libraries & App Engine -->
-  <script src="configurator.js?v=10.0.0"></script>
-  <script src="router.js?v=10.0.0"></script>
-  <script src="app.js?v=10.0.0"></script>
+  <script src="configurator.js?v=11.0.0"></script>
+  <script src="router.js?v=11.0.0"></script>
+  <script src="app.js?v=11.0.0"></script>
 
 </body>
 </html>

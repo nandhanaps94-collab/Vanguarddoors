@@ -312,3 +312,10 @@ window.scrollInspirationCarousel = function(direction) {
     track.scrollBy({ left: direction * 320, behavior: 'smooth' });
   }
 };
+
+window.scrollReviewsCarousel = function(direction) {
+  const track = document.getElementById('reviews-carousel-track');
+  if (track) {
+    track.scrollBy({ left: direction * 280, behavior: 'smooth' });
+  }
+};
