@@ -1424,60 +1424,174 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   SECURITY & ENGINEERING SECTION (Soft Warm Gray Section: #EBE9E3)
+   SECURITY SECTION (ROCKDOOR BENCHMARK SCREENSHOTS 2 & 3 EXACT MATCH)
    ========================================================================== */
+.security-section-rockdoor,
 .security-section {
-  padding: 7rem 0;
-  background-color: var(--bg-tertiary);
-  color: var(--text-primary);
-  position: relative;
+  padding: 5rem 0 6rem;
+  background-color: var(--bg-main);
   border-bottom: 1px solid var(--border-subtle);
 }
 
+.security-header-flex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.security-title-text {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.security-title-text .highlight-bold {
+  font-weight: 700;
+}
+
+.security-header-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  padding-bottom: 0.35rem;
+}
+
+.security-grid-rockdoor,
 .security-tech-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 4rem;
+  gap: 1.5rem;
 }
 
+.security-card-rockdoor,
 .security-card {
-  background: var(--bg-white);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 2.5rem 2rem;
-  transition: all var(--transition-smooth);
-  box-shadow: var(--shadow-subtle);
-}
-
-.security-card:hover {
-  border-color: var(--text-primary);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-
-.security-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: var(--radius-sm);
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
+  position: relative;
+  height: 520px;
+  border-radius: 12px;
+  overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-primary);
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 1.75rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.security-card-rockdoor:hover,
+.security-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+}
+
+.security-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.security-card-rockdoor:hover .security-card-img,
+.security-card:hover .security-card-img {
+  transform: scale(1.06);
+}
+
+.security-card-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(0, 0, 0, 0.88) 100%
+  );
+  z-index: 2;
+}
+
+.security-card-content {
+  position: relative;
+  z-index: 5;
+}
+
+.security-card-icon {
+  color: #FFFFFF;
+  margin-bottom: 0.75rem;
+}
+
+.security-card-head {
+  font-family: var(--font-sans);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.15;
+  margin-bottom: 0.65rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.security-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 400;
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
 
-.security-card h3 {
-  font-size: 1.35rem;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
+.security-btn-glass {
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-.security-card p {
-  color: var(--text-secondary);
+.security-card-rockdoor:hover .security-btn-glass {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.security-btn-purple {
+  background: #7c3aed;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  border: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.security-btn-purple:hover {
+  background: #6d28d9;
+  transform: translateY(-2px);
+}
   font-size: 0.9375rem;
   line-height: 1.6;
 }
