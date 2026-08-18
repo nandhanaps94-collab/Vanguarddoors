@@ -1667,10 +1667,10 @@ class AppRouter {
                   </div>
                 </div>
 
-              </div>
-            </div>
-          </div>
         </section>
+      `;
+    }
+
     if (path === '/doors/cottage-doors' || path === '/cottage-doors' || path.includes('cottage')) {
       return `
         <!-- COTTAGE DOOR DEDICATED PHOTOGRAPHIC HERO SECTION -->
