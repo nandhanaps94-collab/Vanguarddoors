@@ -183,7 +183,7 @@ class AppRouter {
       pageHTML = this.renderDoorsPage(routeObj, '/doors/stable-doors');
     } else if (path === '/cottage-doors') {
       pageHTML = this.renderDoorsPage(routeObj, '/doors/cottage-doors');
-    } else if (path.startsWith('/doors')) {
+    } else if (path.startsWith('/doors') || path.startsWith('/composite')) {
       pageHTML = this.renderDoorsPage(routeObj, path);
     } else if (path.startsWith('/colours')) {
       pageHTML = this.renderColoursPage(routeObj, path);
@@ -974,21 +974,25 @@ class AppRouter {
       `;
     }
 
-    if (path === '/doors') {
+    if (path === '/doors' || path.startsWith('/composite') || path === '/doors/composite-doors') {
       return `
         <!-- COMPOSITE DOORS DEDICATED PHOTOGRAPHIC HERO SECTION -->
-        <section class="hero-section" style="height: 480px; min-height: 420px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
+        <section class="hero-section" style="height: 520px; min-height: 440px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
           <div class="hero-bg" style="position: absolute; inset: 0; z-index: 1;">
             <img src="assets/composite_doors_hero.jpg" alt="Anthracite Grey Composite Front Door with Landscaped Garden" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;" />
           </div>
-          <div class="hero-overlay" style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.30) 60%, rgba(0,0,0,0.65) 100%); z-index: 2;"></div>
+          <div class="hero-overlay" style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.30) 60%, rgba(0,0,0,0.70) 100%); z-index: 2;"></div>
 
           <div class="container" style="position: relative; z-index: 10; text-align: center; max-width: 800px; color: #FFFFFF;">
-            <span class="eyebrow" style="color: var(--accent-gold); letter-spacing: 0.18em; font-weight: 700; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">COMPOSITE DOORS</span>
-            <h1 class="hero-title" style="font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 0.75rem; color: #FFFFFF; font-family: var(--font-heading); text-shadow: 0 2px 8px rgba(0,0,0,0.7);">Composite Doors</h1>
-            <p class="hero-subhead" style="font-size: 1.125rem; color: rgba(255,255,255,0.92); max-width: 660px; margin: 0 auto 1.75rem; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">
-              Explore our complete collection of British manufactured composite doors designed for style, security and thermal performance.
+            <span class="eyebrow" style="color: var(--accent-gold); letter-spacing: 0.18em; font-weight: 700; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">THE COMPLETE RANGE</span>
+            <h1 class="hero-title" style="font-size: clamp(2.5rem, 4.5vw, 3.75rem); margin-bottom: 0.75rem; color: #FFFFFF; font-family: var(--font-heading); text-shadow: 0 2px 8px rgba(0,0,0,0.7);">Composite Doors</h1>
+            <p class="hero-subhead" style="font-size: 1.125rem; color: rgba(255,255,255,0.92); max-width: 680px; margin: 0 auto 1.75rem; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">
+              Beautifully engineered composite doors combining distinctive British design, advanced multi-point security and outstanding thermal insulation.
             </p>
+            <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
+              <a href="#3d-designer" class="btn" style="background: #18191B; color: #FFFFFF; font-weight: 700; border-radius: 30px; padding: 0.85rem 2rem; text-decoration: none; font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase;">DESIGN YOUR DOOR IN 3D</a>
+              <a href="#/installer-finder" class="btn" style="background: rgba(255, 255, 255, 0.92); color: #18191B; font-weight: 700; border-radius: 30px; padding: 0.85rem 2rem; text-decoration: none; font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase;">GET FREE HOME SURVEY</a>
+            </div>
           </div>
         </section>
 
