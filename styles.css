@@ -3219,3 +3219,15 @@ html, body {
     gap: 2.5rem !important;
   }
 }
+
+@media (max-width: 1200px) {
+  .front-doors-grid-photo {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .front-doors-grid-photo {
+    grid-template-columns: 1fr !important;
+  }
+}

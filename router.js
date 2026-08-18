@@ -561,10 +561,10 @@ class AppRouter {
       return this.renderProductDetailPage(routeObj);
     }
 
-    if (path === '/doors/front-doors') {
+    if (path === '/doors/front-doors' || path === '/front-doors') {
       return `
         <!-- FRONT DOOR DEDICATED PHOTOGRAPHIC HERO SECTION -->
-        <section class="hero-section" style="height: 520px; min-height: 480px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
+        <section class="hero-section" style="height: 480px; min-height: 420px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
           <div class="hero-bg" style="position: absolute; inset: 0; z-index: 1;">
             <img src="assets/front_door_hero.jpg" alt="Luxury Front Entrance Door Interior" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;" />
           </div>
@@ -576,88 +576,184 @@ class AppRouter {
             <p class="hero-subhead" style="font-size: 1.125rem; color: rgba(255,255,255,0.92); max-width: 660px; margin: 0 auto 1.75rem; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">
               Make a lasting first impression with a front entrance door custom crafted around your home, your style and your security.
             </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-              <a href="#/door-designer" class="btn btn-gold">Design Your Front Door in 3D</a>
-              <a href="#/installer-finder" class="btn btn-dark-outline" style="background: rgba(255,255,255,0.9); color: #171717; border-color: #FFFFFF;">Get Free Home Survey</a>
-            </div>
           </div>
         </section>
 
-        <!-- INTERACTIVE FILTERS & PRODUCT GRID -->
-        <section class="products-section" style="padding: 4rem 0;">
+        <!-- TOP CATEGORY TABS BAR -->
+        <div class="category-tabs-bar-rockdoor" style="padding: 1.5rem 0; background: var(--bg-main); border-bottom: 1px solid var(--border-subtle);">
           <div class="container">
-            <div style="background: var(--bg-white); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.5rem; margin-bottom: 3rem; display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center;">
-              <strong style="font-size: 0.875rem; color: var(--text-primary);">Filter Front Doors:</strong>
-              <button class="tab-btn active" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display='flex');">All Front Doors</button>
-              <button class="tab-btn" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display = c.dataset.category === 'modern' ? 'flex' : 'none');">Modern Linear</button>
-              <button class="tab-btn" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display = c.dataset.category === 'traditional' ? 'flex' : 'none');">Traditional Period</button>
-              <button class="tab-btn" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display = c.dataset.category === 'cottage' ? 'flex' : 'none');">Cottage Plank</button>
+            <div style="display: flex; gap: 2.25rem; overflow-x: auto; white-space: nowrap; scrollbar-width: none;">
+              <a href="#/front-doors" class="cat-tab-link active" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 700; color: var(--text-primary); text-decoration: none; border-bottom: 2px solid var(--text-primary); padding-bottom: 0.4rem;">Front Doors</a>
+              <a href="#/back-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Back Doors</a>
+              <a href="#/french-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">French Doors</a>
+              <a href="#/double-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Double Doors</a>
+              <a href="#/stable-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Stable Doors</a>
+              <a href="#/cottage-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Cottage Doors</a>
             </div>
+          </div>
+        </div>
 
-            <div class="products-grid">
-              <div class="product-card" data-category="modern">
-                <div class="product-card-image">
-                  <span class="product-badge">BEST SELLER</span>
-                  <img src="assets/front_door_hero.jpg" alt="Front Door Design" style="width: 100%; height: 100%; object-fit: cover;" />
+        <!-- 12 FRONT DOOR PHOTO CARDS GRID -->
+        <section class="products-section" style="padding: 3.5rem 0 6rem; background-color: var(--bg-main);">
+          <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;" class="front-doors-grid-photo">
+              
+              <!-- CARD 1: Hudson -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/arden'">
+                <img src="assets/composite_doors_side.jpg" class="inspiration-card-img" alt="Hudson Front Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
                 </div>
-                <div class="product-card-body">
-                  <h3>Arden Front Entrance</h3>
-                  <span class="product-colour-tag">Shown in Warm Architectural Cream</span>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">Full-height glazed side lights with high-security triple laminated glass.</p>
-                  <div class="product-card-specs"><span>⚡ A+ Energy</span><span>🛡️ PAS 24</span></div>
-                  <div class="product-card-footer">
-                    <a href="#/doors/arden" class="btn btn-dark-outline btn-sm">View Details</a>
-                    <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','arden')" class="btn btn-primary btn-sm">Design 3D</a>
-                  </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Hudson</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
                 </div>
               </div>
 
-              <div class="product-card" data-category="traditional">
-                <div class="product-card-image">
-                  <span class="product-badge">PERIOD CLASSIC</span>
-                  <svg viewBox="0 0 160 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="10" y="10" width="140" height="300" fill="#18191b" rx="4" />
-                    <path d="M 30,70 A 15,15 0 0,1 60,70 L 60,130 L 30,130 Z" fill="#e0f2fe" stroke="#000" stroke-width="2"/>
-                    <path d="M 100,70 A 15,15 0 0,1 130,70 L 130,130 L 100,130 Z" fill="#e0f2fe" stroke="#000" stroke-width="2"/>
-                    <rect x="30" y="160" width="100" height="120" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" rx="4" />
-                    <rect x="135" y="160" width="6" height="40" fill="#d4af37" rx="2" />
-                  </svg>
+              <!-- CARD 2: Vermont -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/arden'">
+                <img src="assets/collection_arden.jpg" class="inspiration-card-img" alt="Vermont Front Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
                 </div>
-                <div class="product-card-body">
-                  <h3>Windsor Front Door</h3>
-                  <span class="product-colour-tag">Shown in Midnight Black</span>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">Twin arch glazed panels with period lower section.</p>
-                  <div class="product-card-specs"><span>⚡ A Rating</span><span>🛡️ PAS 24</span></div>
-                  <div class="product-card-footer">
-                    <a href="#/doors/windsor" class="btn btn-dark-outline btn-sm">View Details</a>
-                    <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','windsor')" class="btn btn-primary btn-sm">Design 3D</a>
-                  </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Vermont</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
                 </div>
               </div>
 
-              <div class="product-card" data-category="cottage">
-                <div class="product-card-image">
-                  <span class="product-badge">COTTAGE CHARM</span>
-                  <svg viewBox="0 0 160 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="10" y="10" width="140" height="300" fill="#7a967f" rx="4" />
-                    <line x1="45" y1="10" x2="45" y2="310" stroke="rgba(0,0,0,0.2)" stroke-width="2" />
-                    <line x1="80" y1="10" x2="80" y2="310" stroke="rgba(0,0,0,0.2)" stroke-width="2" />
-                    <line x1="115" y1="10" x2="115" y2="310" stroke="rgba(0,0,0,0.2)" stroke-width="2" />
-                    <polygon points="80,40 110,80 80,120 50,80" fill="#e0f2fe" stroke="#000" stroke-width="2"/>
-                    <rect x="135" y="150" width="6" height="40" fill="#e2e8f0" rx="2" />
-                  </svg>
+              <!-- CARD 3: Vogue -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/arden'">
+                <img src="assets/modern_doors_hero.jpg" class="inspiration-card-img" alt="Vogue Front Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
                 </div>
-                <div class="product-card-body">
-                  <h3>Malvern Front Door</h3>
-                  <span class="product-colour-tag">Shown in Chartwell Green</span>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">Vertical tongue & groove cottage plank with diamond aperture window.</p>
-                  <div class="product-card-specs"><span>⚡ A+ Energy</span><span>🛡️ PAS 24</span></div>
-                  <div class="product-card-footer">
-                    <a href="#/doors/malvern" class="btn btn-dark-outline btn-sm">View Details</a>
-                    <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','malvern')" class="btn btn-primary btn-sm">Design 3D</a>
-                  </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Vogue</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
                 </div>
               </div>
+
+              <!-- CARD 4: Manhattan -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/arden'">
+                <img src="assets/collection_stable.jpg" class="inspiration-card-img" alt="Manhattan Front Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Manhattan</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 5: Aspen -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/malvern'">
+                <img src="assets/inspiration_1.jpg" class="inspiration-card-img" alt="Aspen Front Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Aspen</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 6: Dune Vision -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/arden'">
+                <img src="assets/composite_doors_hero.jpg" class="inspiration-card-img" alt="Dune Vision Front Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Dune Vision</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 7: Dune Retreat -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/arden'">
+                <img src="assets/composite_doors_side2.jpg" class="inspiration-card-img" alt="Dune Retreat Front Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Dune Retreat</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 8: Indiana -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/arden'">
+                <img src="assets/story_contemporary.jpg" class="inspiration-card-img" alt="Indiana Front Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Indiana</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 9: Byron -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/windsor'">
+                <img src="assets/story_victorian.jpg" class="inspiration-card-img" alt="Byron Front Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Traditional</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Byron</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 10: Warwick -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/windsor'">
+                <img src="assets/front_door_hero.jpg" class="inspiration-card-img" alt="Warwick Front Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Traditional</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Warwick</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 11: Astoria -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/windsor'">
+                <img src="assets/collection_windsor.jpg" class="inspiration-card-img" alt="Astoria Front Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Traditional</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Astoria</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 12: Newark -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/windsor'">
+                <img src="assets/story_forever_home.jpg" class="inspiration-card-img" alt="Newark Front Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Traditional</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Newark</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
