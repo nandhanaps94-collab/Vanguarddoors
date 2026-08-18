@@ -977,110 +977,115 @@ class AppRouter {
     if (path === '/doors') {
       return `
         <!-- COMPOSITE DOORS DEDICATED PHOTOGRAPHIC HERO SECTION -->
-        <section class="hero-section" style="height: 520px; min-height: 480px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
+        <section class="hero-section" style="height: 480px; min-height: 420px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
           <div class="hero-bg" style="position: absolute; inset: 0; z-index: 1;">
             <img src="assets/composite_doors_hero.jpg" alt="Anthracite Grey Composite Front Door with Landscaped Garden" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;" />
           </div>
           <div class="hero-overlay" style="position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.30) 60%, rgba(0,0,0,0.65) 100%); z-index: 2;"></div>
 
           <div class="container" style="position: relative; z-index: 10; text-align: center; max-width: 800px; color: #FFFFFF;">
-            <span class="eyebrow" style="color: var(--accent-gold); letter-spacing: 0.18em; font-weight: 700; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">THE COMPLETE RANGE</span>
+            <span class="eyebrow" style="color: var(--accent-gold); letter-spacing: 0.18em; font-weight: 700; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">COMPOSITE DOORS</span>
             <h1 class="hero-title" style="font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 0.75rem; color: #FFFFFF; font-family: var(--font-heading); text-shadow: 0 2px 8px rgba(0,0,0,0.7);">Composite Doors</h1>
             <p class="hero-subhead" style="font-size: 1.125rem; color: rgba(255,255,255,0.92); max-width: 660px; margin: 0 auto 1.75rem; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">
-              Beautifully engineered composite doors combining distinctive British design, advanced multi-point security and outstanding thermal insulation.
+              Explore our complete collection of British manufactured composite doors designed for style, security and thermal performance.
             </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-              <a href="#/door-designer" class="btn btn-gold">Design Your Door in 3D</a>
-              <a href="#/installer-finder" class="btn btn-dark-outline" style="background: rgba(255,255,255,0.9); color: #171717; border-color: #FFFFFF;">Get Free Home Survey</a>
-            </div>
           </div>
         </section>
 
-        <!-- INTERACTIVE FILTERS & PRODUCT GRID -->
-        <section class="products-section" style="padding: 4rem 0;">
+        <!-- COMPOSITE DOORS CATEGORY GRID (MATCHING ROCKDOOR BENCHMARK SCREENSHOTS) -->
+        <section class="composite-doors-category-section" style="padding: 4.5rem 0 6rem; background-color: var(--bg-main);">
           <div class="container">
-            <div style="background: var(--bg-white); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.5rem; margin-bottom: 3rem; display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center;">
-              <strong style="font-size: 0.875rem; color: var(--text-primary);">Filter Collection:</strong>
-              <button class="tab-btn active" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display='flex');">All Styles</button>
-              <button class="tab-btn" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display = c.dataset.category === 'modern' ? 'flex' : 'none');">Modern</button>
-              <button class="tab-btn" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display = c.dataset.category === 'traditional' ? 'flex' : 'none');">Traditional</button>
-              <button class="tab-btn" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display = c.dataset.category === 'cottage' ? 'flex' : 'none');">Cottage</button>
-              <button class="tab-btn" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display = c.dataset.category === 'stable' ? 'flex' : 'none');">Stable</button>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 1.5rem;" class="composite-doors-grid-top">
+              <!-- CARD 1: FRONT DOORS -->
+              <div class="category-card-rockdoor">
+                <div class="category-card-img-box">
+                  <img src="assets/story_contemporary.jpg" alt="Front Doors" class="category-card-img" />
+                </div>
+                <div class="category-card-body">
+                  <h3 class="category-card-title">Front Doors</h3>
+                  <p class="category-card-text">Thoughtfully designed to bring together outstanding security, energy efficiency, and unique style, our front doors come in a range of designs and colours to suit every home.</p>
+                  <a href="#/front-doors" class="category-card-btn">
+                    <span>Explore Front Doors</span>
+                    <span class="btn-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- CARD 2: BACK DOORS -->
+              <div class="category-card-rockdoor">
+                <div class="category-card-img-box">
+                  <img src="assets/back_door_hero.png" alt="Back Doors" class="category-card-img" />
+                </div>
+                <div class="category-card-body">
+                  <h3 class="category-card-title">Back Doors</h3>
+                  <p class="category-card-text">Rockdoor back doors combine security, efficiency, and lasting durability. With a variety of designs and colours, you can create a back door that complements your home.</p>
+                  <a href="#/back-doors" class="category-card-btn">
+                    <span>Explore Back Doors</span>
+                    <span class="btn-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- CARD 3: FRENCH DOORS -->
+              <div class="category-card-rockdoor">
+                <div class="category-card-img-box">
+                  <img src="assets/sec_lock_cylinder.jpg" alt="French Doors" class="category-card-img" />
+                </div>
+                <div class="category-card-body">
+                  <h3 class="category-card-title">French Doors</h3>
+                  <p class="category-card-text">Bring elegance and light into your home with Rockdoor French doors. Available in a variety of designs, colours, and glazing styles, they combine style, security, and durability.</p>
+                  <a href="#/french-doors" class="category-card-btn">
+                    <span>Explore French Doors</span>
+                    <span class="btn-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- CARD 4: DOUBLE DOORS -->
+              <div class="category-card-rockdoor">
+                <div class="category-card-img-box">
+                  <img src="assets/collection_stable.jpg" alt="Double Doors" class="category-card-img" />
+                </div>
+                <div class="category-card-body">
+                  <h3 class="category-card-title">Double Doors</h3>
+                  <p class="category-card-text">Make a statement with Rockdoor double doors — choose from a range of designs, colours, and pair with side panels to add style and brighten your entrance.</p>
+                  <a href="#/double-doors" class="category-card-btn">
+                    <span>Explore Double Doors</span>
+                    <span class="btn-arrow">→</span>
+                  </a>
+                </div>
+              </div>
             </div>
 
-            <div class="products-grid">
-              <div class="product-card" data-category="modern">
-                <div class="product-card-image">
-                  <span class="product-badge">FLAGSHIP DESIGN</span>
-                  <img src="assets/composite_doors_hero.jpg" alt="Anthracite Grey Composite Front Door" style="width: 100%; height: 100%; object-fit: cover;" />
+            <!-- ROW 2: STABLE DOORS & COTTAGE DOORS -->
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 50%;" class="composite-doors-grid-bottom">
+              <!-- CARD 5: STABLE DOORS -->
+              <div class="category-card-rockdoor">
+                <div class="category-card-img-box">
+                  <img src="assets/inspiration_2.jpg" alt="Stable Doors" class="category-card-img" />
                 </div>
-                <div class="product-card-body">
-                  <h3>Arden Quad Glazed</h3>
-                  <span class="product-colour-tag">Shown in Anthracite Grey with Stainless Bar Handle</span>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">Contemporary 4-square glazed aperture insert with brushed long pull bar handle.</p>
-                  <div class="product-card-specs"><span>⚡ A+ Energy</span><span>🛡️ PAS 24</span></div>
-                  <div class="product-card-footer">
-                    <a href="#/doors/arden" class="btn btn-dark-outline btn-sm">View Details</a>
-                    <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','arden')" class="btn btn-primary btn-sm">Design 3D</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="product-card" data-category="modern">
-                <div class="product-card-image">
-                  <span class="product-badge">URBAN ARCHITECTURE</span>
-                  <img src="assets/composite_doors_side.jpg" alt="Dark Modern Composite Entrance Door with Vertical Light Strip" style="width: 100%; height: 100%; object-fit: cover;" />
-                </div>
-                <div class="product-card-body">
-                  <h3>Urban Linear Entrance</h3>
-                  <span class="product-colour-tag">Shown in Dark Graphite with Stainless Bar Handle</span>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">Vertical linear frosted glass aperture with full-height brushed stainless pull handle.</p>
-                  <div class="product-card-specs"><span>⚡ A+ Energy</span><span>🛡️ PAS 24</span></div>
-                  <div class="product-card-footer">
-                    <a href="#/doors/arden" class="btn btn-dark-outline btn-sm">View Details</a>
-                    <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','arden')" class="btn btn-primary btn-sm">Design 3D</a>
-                  </div>
+                <div class="category-card-body">
+                  <h3 class="category-card-title">Stable Doors</h3>
+                  <p class="category-card-text">With their distinctive split design, Stable composite doors bring a friendly, approachable feel to any home, blending style with everyday practicality.</p>
+                  <a href="#/stable-doors" class="category-card-btn">
+                    <span>Explore Stable Doors</span>
+                    <span class="btn-arrow">→</span>
+                  </a>
                 </div>
               </div>
 
-              <div class="product-card" data-category="modern">
-                <div class="product-card-image">
-                  <span class="product-badge">METALLIC INLAY</span>
-                  <img src="assets/composite_doors_side2.jpg" alt="Dark Composite Entrance Door with Metallic Inlay Stripes" style="width: 100%; height: 100%; object-fit: cover;" />
+              <!-- CARD 6: COTTAGE DOORS -->
+              <div class="category-card-rockdoor">
+                <div class="category-card-img-box">
+                  <img src="assets/inspiration_1.jpg" alt="Cottage Doors" class="category-card-img" />
                 </div>
-                <div class="product-card-body">
-                  <h3>Metro Inlay Contemporary</h3>
-                  <span class="product-colour-tag">Shown in Anthracite Matte with Side Screen</span>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">Horizontal brushed metallic inlay stripes with long pull handle and side light.</p>
-                  <div class="product-card-specs"><span>⚡ A+ Energy</span><span>🛡️ PAS 24</span></div>
-                  <div class="product-card-footer">
-                    <a href="#/doors/arden" class="btn btn-dark-outline btn-sm">View Details</a>
-                    <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','arden')" class="btn btn-primary btn-sm">Design 3D</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="product-card" data-category="cottage">
-                <div class="product-card-image">
-                  <span class="product-badge">COTTAGE CHARM</span>
-                  <svg viewBox="0 0 160 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="10" y="10" width="140" height="300" fill="#7a967f" rx="4" />
-                    <line x1="45" y1="10" x2="45" y2="310" stroke="rgba(0,0,0,0.2)" stroke-width="2" />
-                    <line x1="80" y1="10" x2="80" y2="310" stroke="rgba(0,0,0,0.2)" stroke-width="2" />
-                    <line x1="115" y1="10" x2="115" y2="310" stroke="rgba(0,0,0,0.2)" stroke-width="2" />
-                    <polygon points="80,40 110,80 80,120 50,80" fill="#e0f2fe" stroke="#000" stroke-width="2"/>
-                    <rect x="135" y="150" width="6" height="40" fill="#e2e8f0" rx="2" />
-                  </svg>
-                </div>
-                <div class="product-card-body">
-                  <h3>Malvern Cottage Plank</h3>
-                  <span class="product-colour-tag">Shown in Chartwell Green</span>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">Vertical tongue & groove cottage plank with diamond aperture window.</p>
-                  <div class="product-card-specs"><span>⚡ A+ Energy</span><span>🛡️ PAS 24</span></div>
-                  <div class="product-card-footer">
-                    <a href="#/doors/malvern" class="btn btn-dark-outline btn-sm">View Details</a>
-                    <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','malvern')" class="btn btn-primary btn-sm">Design 3D</a>
-                  </div>
+                <div class="category-card-body">
+                  <h3 class="category-card-title">Cottage Doors</h3>
+                  <p class="category-card-text">Inspired by traditional cottages, these composite doors bring timeless charm, cosy appeal, and subtle craftsmanship that give your home a truly inviting entrance.</p>
+                  <a href="#/cottage-doors" class="category-card-btn">
+                    <span>Explore Cottage Doors</span>
+                    <span class="btn-arrow">→</span>
+                  </a>
                 </div>
               </div>
             </div>
