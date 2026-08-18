@@ -996,108 +996,238 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   PRODUCT RANGE SECTION (Main Warm Off-White)
+   BROWSE ROCKDOORS BY CATEGORY (ROCKDOOR BENCHMARK EXACT MATCH)
    ========================================================================== */
+.browse-section-rockdoor,
 .products-section {
-  padding: 7rem 0;
+  padding: 5rem 0 6rem;
   background-color: var(--bg-main);
 }
 
-.filter-tabs {
+.browse-header-flex {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 3rem;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.tab-btn {
-  padding: 0.75rem 1.75rem;
-  font-family: var(--font-display);
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  background: var(--bg-white);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-pill);
+.browse-title-text {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.browse-title-text .highlight-bold {
+  font-weight: 700;
+}
+
+.browse-tab-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.browse-tab-link {
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 400;
   color: var(--text-secondary);
   cursor: pointer;
-  transition: all var(--transition-fast);
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.25s ease, border-color 0.25s ease;
 }
 
-.tab-btn:hover,
-.tab-btn.active {
-  background: var(--btn-primary-bg);
-  color: var(--btn-primary-text);
-  border-color: var(--btn-primary-bg);
-  box-shadow: var(--shadow-subtle);
+.browse-tab-link.active,
+.browse-tab-link:hover {
+  color: var(--text-primary);
+  font-weight: 600;
+  border-bottom-color: #7c3aed;
 }
 
-.products-grid {
+.browse-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.browse-carousel-track {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 0.5rem 0.25rem;
 }
 
-.product-card {
-  background: var(--bg-white);
-  border-radius: var(--radius-md);
+.browse-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.browse-card-rockdoor {
+  position: relative;
+  height: 500px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: var(--shadow-subtle);
-  border: 1px solid var(--border-subtle);
-  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  min-width: 0;
 }
 
-.product-card:hover {
+.browse-card-rockdoor:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
 }
 
-.product-card-image {
+.browse-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.browse-card-rockdoor:hover .browse-card-img {
+  transform: scale(1.06);
+}
+
+.browse-card-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.02) 40%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 2;
+}
+
+.browse-card-top {
   position: relative;
-  height: 360px;
-  background: var(--bg-secondary);
+  z-index: 5;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.browse-badge-glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.browse-card-bottom {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.browse-card-name {
+  font-family: var(--font-sans);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  margin: 0;
+}
+
+.browse-btn-explore {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.browse-card-rockdoor:hover .browse-btn-explore {
+  background: rgba(255, 255, 255, 0.45);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #EAE8E1;
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
-  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.product-card-image svg,
-.product-card-image img {
-  height: 90%;
-  width: auto;
-  object-fit: contain;
-  transition: transform var(--transition-smooth);
+.carousel-arrow:hover {
+  background: #FFFFFF;
+  transform: translateY(-50%) scale(1.08);
 }
 
-.product-card:hover .product-card-image img,
-.product-card:hover .product-card-image svg {
-  transform: scale(1.05);
+.carousel-arrow.left {
+  left: -22px;
 }
 
-.product-badge {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background: var(--text-primary);
-  color: #FFFFFF;
-  font-family: var(--font-display);
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-pill);
+.carousel-arrow.right {
+  right: -22px;
 }
 
-.product-card-body {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
+@media (max-width: 1024px) {
+  .browse-carousel-track {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .browse-carousel-track {
+    grid-template-columns: 1fr;
+  }
+  .browse-card-rockdoor {
+    height: 420px;
+  }
+  .carousel-arrow {
+    display: none;
+  }
+}
   flex: 1;
 }
 

@@ -7,7 +7,7 @@
   <meta name="description" content="Rockdoor is a leading UK manufacturer of premium composite doors, offering unmatched security, style and thermal performance. Find your ideal door now.">
   
   <!-- CSS Design System -->
-  <link rel="stylesheet" href="styles.css?v=3.0.0">
+  <link rel="stylesheet" href="styles.css?v=4.0.0">
 </head>
 <body>
 
@@ -428,106 +428,136 @@
     </section>
 
     <!-- ==========================================================================
-         8. PRODUCT RANGE SECTION
+         8. BROWSE ROCKDOORS BY CATEGORY (MATCHING ROCKDOOR BENCHMARK SCREENSHOT 3)
          ========================================================================== -->
-    <section id="products-section" class="products-section">
+    <section id="products-section" class="browse-section-rockdoor">
       <div class="container">
-        <div class="section-header">
-          <span class="eyebrow">COMPOSITE COLLECTION</span>
-          <h2 class="section-title">Explore Our Door Collection</h2>
-          <p class="section-subtitle">Engineered for luxury homes across Britain. Choose a style to begin.</p>
+        <div class="browse-header-flex">
+          <h2 class="browse-title-text">Browse Rockdoors by <span id="browse-active-cat" class="highlight-bold">modern</span></h2>
+          
+          <div class="browse-tab-links">
+            <button class="browse-tab-link active" data-filter="modern" onclick="switchBrowseTab('modern', 'modern')">Modern</button>
+            <button class="browse-tab-link" data-filter="traditional" onclick="switchBrowseTab('traditional', 'traditional')">Traditional</button>
+            <button class="browse-tab-link" data-filter="stable" onclick="switchBrowseTab('stable', 'stable')">Stable</button>
+            <button class="browse-tab-link" data-filter="cottage" onclick="switchBrowseTab('cottage', 'cottage')">Cottage</button>
+          </div>
         </div>
 
-        <!-- Filter Tabs -->
-        <div class="filter-tabs">
-          <button class="tab-btn active" data-filter="all">All Collection</button>
-          <button class="tab-btn" data-filter="modern">Modern Contemporary</button>
-          <button class="tab-btn" data-filter="traditional">Traditional Heritage</button>
-          <button class="tab-btn" data-filter="cottage">Cottage Plank</button>
-          <button class="tab-btn" data-filter="stable">Stable Split</button>
-        </div>
+        <div class="browse-carousel-wrapper">
+          <button class="carousel-arrow left" onclick="scrollBrowseCarousel(-1)" aria-label="Previous">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
 
-        <!-- Grid of Products -->
-        <div class="products-grid">
-          <!-- Arden -->
-          <div class="product-card" data-category="modern">
-            <div class="product-card-image" style="height: 320px;">
-              <span class="product-badge">MODERN FAVOURITE</span>
-              <img src="assets/collection_arden.jpg" alt="Arden Triple Glazed Modern Composite Door" style="width: 100%; height: 100%; object-fit: cover;" />
-            </div>
-            <div class="product-card-body">
-              <h3>Arden</h3>
-              <span class="product-colour-tag">Shown in Anthracite Grey (RAL 7016)</span>
-              <div class="product-card-specs">
-                <span>⚡ A+ Energy</span>
-                <span>🛡️ PAS 24</span>
+          <div id="browse-carousel-track" class="browse-carousel-track">
+            <!-- Card 1: Hudson -->
+            <div class="browse-card-rockdoor" data-category="modern" onclick="window.location.hash='#/doors/arden'">
+              <img src="assets/collection_arden.jpg" class="browse-card-img" alt="Hudson Modern Door" />
+              <div class="browse-card-gradient"></div>
+              
+              <div class="browse-card-top">
+                <span class="browse-badge-glass">Modern</span>
               </div>
-              <div class="product-card-footer">
-                <a href="#/doors/arden" class="btn btn-dark-outline btn-sm">View Details</a>
-                <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','arden')" class="btn btn-gold btn-sm">Customize</a>
+              
+              <div class="browse-card-bottom">
+                <h3 class="browse-card-name">Hudson</h3>
+                <span class="browse-btn-explore">Explore ↗</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Vermont -->
+            <div class="browse-card-rockdoor" data-category="modern" onclick="window.location.hash='#/doors/arden'">
+              <img src="assets/modern_doors_hero.jpg" class="browse-card-img" alt="Vermont Modern Door" />
+              <div class="browse-card-gradient"></div>
+              
+              <div class="browse-card-top">
+                <span class="browse-badge-glass">Modern</span>
+              </div>
+              
+              <div class="browse-card-bottom">
+                <h3 class="browse-card-name">Vermont</h3>
+                <span class="browse-btn-explore">Explore ↗</span>
+              </div>
+            </div>
+
+            <!-- Card 3: Vogue -->
+            <div class="browse-card-rockdoor" data-category="modern" onclick="window.location.hash='#/doors/arden'">
+              <img src="assets/composite_doors_hero.jpg" class="browse-card-img" alt="Vogue Modern Door" />
+              <div class="browse-card-gradient"></div>
+              
+              <div class="browse-card-top">
+                <span class="browse-badge-glass">Modern</span>
+              </div>
+              
+              <div class="browse-card-bottom">
+                <h3 class="browse-card-name">Vogue</h3>
+                <span class="browse-btn-explore">Explore ↗</span>
+              </div>
+            </div>
+
+            <!-- Card 4: Manhattan -->
+            <div class="browse-card-rockdoor" data-category="modern" onclick="window.location.hash='#/doors/arden'">
+              <img src="assets/hero_composite_door.jpg" class="browse-card-img" alt="Manhattan Modern Door" />
+              <div class="browse-card-gradient"></div>
+              
+              <div class="browse-card-top">
+                <span class="browse-badge-glass">Modern</span>
+              </div>
+              
+              <div class="browse-card-bottom">
+                <h3 class="browse-card-name">Manhattan</h3>
+                <span class="browse-btn-explore">Explore ↗</span>
+              </div>
+            </div>
+
+            <!-- Card 5: Windsor (Traditional) -->
+            <div class="browse-card-rockdoor" data-category="traditional" style="display: none;" onclick="window.location.hash='#/doors/windsor'">
+              <img src="assets/collection_windsor.jpg" class="browse-card-img" alt="Windsor Traditional Door" />
+              <div class="browse-card-gradient"></div>
+              
+              <div class="browse-card-top">
+                <span class="browse-badge-glass">Traditional</span>
+              </div>
+              
+              <div class="browse-card-bottom">
+                <h3 class="browse-card-name">Windsor</h3>
+                <span class="browse-btn-explore">Explore ↗</span>
+              </div>
+            </div>
+
+            <!-- Card 6: Heritage Stable (Stable) -->
+            <div class="browse-card-rockdoor" data-category="stable" style="display: none;" onclick="window.location.hash='#/doors/heritage'">
+              <img src="assets/collection_stable.jpg" class="browse-card-img" alt="Heritage Stable Door" />
+              <div class="browse-card-gradient"></div>
+              
+              <div class="browse-card-top">
+                <span class="browse-badge-glass">Stable</span>
+              </div>
+              
+              <div class="browse-card-bottom">
+                <h3 class="browse-card-name">Heritage Stable</h3>
+                <span class="browse-btn-explore">Explore ↗</span>
+              </div>
+            </div>
+
+            <!-- Card 7: Malvern (Cottage) -->
+            <div class="browse-card-rockdoor" data-category="cottage" style="display: none;" onclick="window.location.hash='#/doors/malvern'">
+              <img src="assets/collection_malvern.jpg" class="browse-card-img" alt="Malvern Cottage Door" />
+              <div class="browse-card-gradient"></div>
+              
+              <div class="browse-card-top">
+                <span class="browse-badge-glass">Cottage</span>
+              </div>
+              
+              <div class="browse-card-bottom">
+                <h3 class="browse-card-name">Malvern</h3>
+                <span class="browse-btn-explore">Explore ↗</span>
               </div>
             </div>
           </div>
 
-          <!-- Windsor -->
-          <div class="product-card" data-category="traditional">
-            <div class="product-card-image" style="height: 320px;">
-              <span class="product-badge">PERIOD CLASSIC</span>
-              <img src="assets/collection_windsor.jpg" alt="Windsor Traditional Twin Arch Composite Entrance Door" style="width: 100%; height: 100%; object-fit: cover;" />
-            </div>
-            <div class="product-card-body">
-              <h3>Windsor</h3>
-              <span class="product-colour-tag">Shown in Midnight Black</span>
-              <div class="product-card-specs">
-                <span>⚡ A Rating</span>
-                <span>🛡️ PAS 24</span>
-              </div>
-              <div class="product-card-footer">
-                <a href="#/doors/windsor" class="btn btn-dark-outline btn-sm">View Details</a>
-                <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','windsor')" class="btn btn-gold btn-sm">Customize</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Malvern -->
-          <div class="product-card" data-category="cottage">
-            <div class="product-card-image" style="height: 320px;">
-              <span class="product-badge">COTTAGE CHARM</span>
-              <img src="assets/collection_malvern.jpg" alt="Malvern Cottage Diamond Glazed Composite Door" style="width: 100%; height: 100%; object-fit: cover;" />
-            </div>
-            <div class="product-card-body">
-              <h3>Malvern</h3>
-              <span class="product-colour-tag">Shown in Chartwell Green</span>
-              <div class="product-card-specs">
-                <span>⚡ A+ Energy</span>
-                <span>🛡️ PAS 24</span>
-              </div>
-              <div class="product-card-footer">
-                <a href="#/doors/malvern" class="btn btn-dark-outline btn-sm">View Details</a>
-                <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','malvern')" class="btn btn-gold btn-sm">Customize</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Heritage Stable -->
-          <div class="product-card" data-category="stable">
-            <div class="product-card-image" style="height: 320px;">
-              <span class="product-badge">DUAL SPLIT</span>
-              <img src="assets/collection_stable.jpg" alt="Heritage Split Stable Composite Door" style="width: 100%; height: 100%; object-fit: cover;" />
-            </div>
-            <div class="product-card-body">
-              <h3>Heritage Stable</h3>
-              <span class="product-colour-tag">Shown in Irish Oak Timber</span>
-              <div class="product-card-specs">
-                <span>⚡ A Rating</span>
-                <span>🛡️ PAS 24</span>
-              </div>
-              <div class="product-card-footer">
-                <a href="#/doors/heritage" class="btn btn-dark-outline btn-sm">View Details</a>
-                <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','heritage')" class="btn btn-gold btn-sm">Customize</a>
-              </div>
-            </div>
-          </div>
+          <button class="carousel-arrow right" onclick="scrollBrowseCarousel(1)" aria-label="Next">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -1075,9 +1105,9 @@
   </footer>
 
   <!-- JavaScript Libraries & App Engine -->
-  <script src="configurator.js?v=3.0.0"></script>
-  <script src="router.js?v=3.0.0"></script>
-  <script src="app.js?v=3.0.0"></script>
+  <script src="configurator.js?v=4.0.0"></script>
+  <script src="router.js?v=4.0.0"></script>
+  <script src="app.js?v=4.0.0"></script>
 
 </body>
 </html>

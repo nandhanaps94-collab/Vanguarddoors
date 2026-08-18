@@ -276,3 +276,32 @@ document.addEventListener('DOMContentLoaded', () => {
     window.doorConfigurator = new window.DoorConfigurator('config-canvas-container', 'config-controls-container');
   }
 });
+
+// Category Switcher for Browse Rockdoors Section
+window.switchBrowseTab = function(category, catName) {
+  const activeLabel = document.getElementById('browse-active-cat');
+  if (activeLabel) activeLabel.textContent = catName;
+
+  document.querySelectorAll('.browse-tab-link').forEach(btn => {
+    if (btn.getAttribute('data-filter') === category) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+
+  document.querySelectorAll('.browse-card-rockdoor').forEach(card => {
+    if (category === 'all' || card.getAttribute('data-category') === category) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+};
+
+window.scrollBrowseCarousel = function(direction) {
+  const track = document.getElementById('browse-carousel-track');
+  if (track) {
+    track.scrollBy({ left: direction * 320, behavior: 'smooth' });
+  }
+};
