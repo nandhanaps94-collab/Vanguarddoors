@@ -757,6 +757,100 @@ class AppRouter {
             </div>
           </div>
         </section>
+
+        <!-- FRONT DOOR FEATURE ACCORDION SECTION (MATCHING BENCHMARK SCREENSHOT) -->
+        <section class="front-doors-feature-section" style="padding: 5.5rem 0 6.5rem; background-color: var(--bg-main); border-top: 1px solid var(--border-subtle);">
+          <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start;" class="back-doors-feature-grid">
+              
+              <!-- LEFT COLUMN: TITLE & 30+ YEARS STAT BADGE -->
+              <div>
+                <span class="eyebrow" style="color: var(--text-muted); font-size: 0.75rem; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Composite front doors</span>
+                <h2 style="font-family: var(--font-sans); font-size: clamp(2.25rem, 3.8vw, 3.25rem); font-weight: 700; color: var(--text-primary); line-height: 1.15; margin-bottom: 1.5rem;">
+                  Strong and secure<br />composite front doors
+                </h2>
+                <p style="font-family: var(--font-sans); font-size: 0.9375rem; line-height: 1.65; color: var(--text-secondary); max-width: 480px; margin-bottom: 2.5rem;">
+                  Your front door is the first and last thing your visitors will see — a gateway into your home. It's only right that your exterior reflects what is inside.
+                </p>
+
+                <!-- 30+ YEARS STAT BADGE CARD -->
+                <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1.25rem; max-width: 420px; box-shadow: 0 2px 10px rgba(0,0,0,0.04);">
+                  <span style="font-family: var(--font-sans); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); line-height: 1;">30+</span>
+                  <span style="font-family: var(--font-sans); font-size: 0.8125rem; line-height: 1.35; color: var(--text-secondary); font-weight: 500;">years of service from a virtually maintenance-free door</span>
+                </div>
+              </div>
+
+              <!-- RIGHT COLUMN: INTERACTIVE ACCORDION ITEMS -->
+              <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+                
+                <!-- ACCORDION ITEM 1 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">🏠</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Built for the demands of a front door</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Engineered with rigid high-density cores, multi-point hook locks and carbon-fibre reinforcement to withstand daily family use and extreme weather.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ACCORDION ITEM 2 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">🎨</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Your perfect door, in a range of styles and colours</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Choose from over 30 door designs, 13 rich timber grain or architectural colour shades, and bespoke glass designs tailored to your taste.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ACCORDION ITEM 3 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">📐</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Every door is made to measure</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Every Rockdoor is custom manufactured to exact millimetre dimensions of your entrance for an airtight, draft-free fit.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ACCORDION ITEM 4 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">🛡️</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">A reinforced inner frame, and a guarantee</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Built with inner high-density polyurethane insulation, steel mesh option, 3-star security cylinder lock, and backed by a comprehensive manufacturer guarantee.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
       `;
     }
 
