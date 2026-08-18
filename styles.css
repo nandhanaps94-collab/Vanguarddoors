@@ -333,6 +333,21 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent-gold);
 }
 
+.hero-brand-logo-rockdoor {
+  display: inline-block;
+  line-height: 0;
+  text-decoration: none;
+}
+.hero-brand-logo-rockdoor img {
+  height: 68px;
+  width: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  border: none;
+  outline: none;
+}
+
 .hero-header-controls {
   display: flex;
   align-items: center;
