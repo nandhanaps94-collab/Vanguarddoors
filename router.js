@@ -760,10 +760,10 @@ class AppRouter {
       `;
     }
 
-    if (path === '/doors/back-doors') {
+    if (path === '/doors/back-doors' || path === '/back-doors') {
       return `
         <!-- BACK DOOR DEDICATED PHOTOGRAPHIC HERO SECTION -->
-        <section class="hero-section" style="height: 520px; min-height: 480px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
+        <section class="hero-section" style="height: 480px; min-height: 420px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
           <div class="hero-bg" style="position: absolute; inset: 0; z-index: 1;">
             <img src="assets/back_door_hero.png" alt="Garden Cottage Composite Back Door" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;" />
           </div>
@@ -775,61 +775,189 @@ class AppRouter {
             <p class="hero-subhead" style="font-size: 1.125rem; color: rgba(255,255,255,0.92); max-width: 660px; margin: 0 auto 1.75rem; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">
               Uncompromising rear entrance security, toughened privacy glazing and outstanding thermal insulation for utility and garden doors.
             </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-              <a href="#/door-designer" class="btn btn-gold">Design Your Back Door in 3D</a>
-              <a href="#/installer-finder" class="btn btn-dark-outline" style="background: rgba(255,255,255,0.9); color: #171717; border-color: #FFFFFF;">Get Free Home Survey</a>
+          </div>
+        </section>
+
+        <!-- TOP CATEGORY TABS BAR -->
+        <div class="category-tabs-bar-rockdoor" style="padding: 1.5rem 0; background: var(--bg-main); border-bottom: 1px solid var(--border-subtle);">
+          <div class="container">
+            <div style="display: flex; gap: 2.25rem; overflow-x: auto; white-space: nowrap; scrollbar-width: none;">
+              <a href="#/front-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Front Doors</a>
+              <a href="#/back-doors" class="cat-tab-link active" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 700; color: var(--text-primary); text-decoration: none; border-bottom: 2px solid var(--text-primary); padding-bottom: 0.4rem;">Back Doors</a>
+              <a href="#/french-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">French Doors</a>
+              <a href="#/double-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Double Doors</a>
+              <a href="#/stable-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Stable Doors</a>
+              <a href="#/cottage-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Cottage Doors</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 BACK DOOR PHOTO CARDS GRID -->
+        <section class="products-section" style="padding: 3.5rem 0 4rem; background-color: var(--bg-main);">
+          <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 1.5rem;" class="front-doors-grid-photo">
+              
+              <!-- CARD 1: Aspen -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/malvern'">
+                <img src="assets/inspiration_1.jpg" class="inspiration-card-img" alt="Aspen Back Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Aspen</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 2: Classic -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/windsor'">
+                <img src="assets/back_door_hero.png" class="inspiration-card-img" alt="Classic Back Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Classic</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 3: Indiana -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/arden'">
+                <img src="assets/story_contemporary.jpg" class="inspiration-card-img" alt="Indiana Back Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Indiana</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 4: Windsor -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/windsor'">
+                <img src="assets/collection_windsor.jpg" class="inspiration-card-img" alt="Windsor Back Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Traditional</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Windsor</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- ROW 2: Stable View Light -->
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;" class="front-doors-grid-photo">
+              <!-- CARD 5: Stable View Light -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/heritage'">
+                <img src="assets/inspiration_2.jpg" class="inspiration-card-img" alt="Stable View Light Back Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Stable</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Stable View Light</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- INTERACTIVE FILTERS & PRODUCT GRID -->
-        <section class="products-section" style="padding: 4rem 0;">
+        <!-- BACK DOOR FEATURE ACCORDION SECTION (MATCHING BENCHMARK SCREENSHOT 3) -->
+        <section class="back-doors-feature-section" style="padding: 5.5rem 0 6.5rem; background-color: var(--bg-main); border-top: 1px solid var(--border-subtle);">
           <div class="container">
-            <div style="background: var(--bg-white); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.5rem; margin-bottom: 3rem; display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center;">
-              <strong style="font-size: 0.875rem; color: var(--text-primary);">Filter Back Doors:</strong>
-              <button class="tab-btn active" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display='flex');">All Back Doors</button>
-              <button class="tab-btn" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display = c.dataset.category === 'half-glazed' ? 'flex' : 'none');">Half Glazed</button>
-              <button class="tab-btn" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display = c.dataset.category === 'stable' ? 'flex' : 'none');">Stable Split</button>
-            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start;" class="back-doors-feature-grid">
+              
+              <!-- LEFT COLUMN: TITLE & STAT BADGE -->
+              <div>
+                <span class="eyebrow" style="color: var(--text-muted); font-size: 0.75rem; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Composite back doors</span>
+                <h2 style="font-family: var(--font-sans); font-size: clamp(2.25rem, 3.8vw, 3.25rem); font-weight: 700; color: var(--text-primary); line-height: 1.15; margin-bottom: 1.5rem;">
+                  Strong and secure<br />composite back doors
+                </h2>
+                <p style="font-family: var(--font-sans); font-size: 0.9375rem; line-height: 1.65; color: var(--text-secondary); max-width: 480px; margin-bottom: 2.5rem;">
+                  Out of sight, but never an afterthought. A back door is where thieves prefer to try — so it deserves the same protection as the front of your home.
+                </p>
 
-            <div class="products-grid">
-              <div class="product-card" data-category="half-glazed">
-                <div class="product-card-image">
-                  <span class="product-badge">FEATURED</span>
-                  <img src="assets/back_door_hero.png" alt="Cottage Garden Back Door" style="width: 100%; height: 100%; object-fit: cover;" />
-                </div>
-                <div class="product-card-body">
-                  <h3>Cottage Garden Rear Entrance</h3>
-                  <span class="product-colour-tag">Shown in Warm Cottage White</span>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">Twin vertical privacy glazing with high-density thermal core and black lever handles.</p>
-                  <div class="product-card-specs"><span>⚡ A+ Energy</span><span>🛡️ PAS 24</span></div>
-                  <div class="product-card-footer">
-                    <a href="#/doors/windsor" class="btn btn-dark-outline btn-sm">View Details</a>
-                    <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','windsor')" class="btn btn-primary btn-sm">Design 3D</a>
-                  </div>
+                <!-- 70% BURGLAR STAT BADGE CARD -->
+                <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1.25rem; max-width: 380px; box-shadow: 0 2px 10px rgba(0,0,0,0.04);">
+                  <span style="font-family: var(--font-sans); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); line-height: 1;">70%</span>
+                  <span style="font-family: var(--font-sans); font-size: 0.8125rem; line-height: 1.35; color: var(--text-secondary); font-weight: 500;">more likely that the rear of your home is targeted by a burglar</span>
                 </div>
               </div>
 
-              <div class="product-card" data-category="stable">
-                <div class="product-card-image">
-                  <span class="product-badge">DUAL SPLIT</span>
-                  <svg viewBox="0 0 160 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="10" y="10" width="140" height="300" fill="#b57f49" rx="4" />
-                    <line x1="10" y1="160" x2="150" y2="160" stroke="#000" stroke-width="3" />
-                    <rect x="25" y="30" width="110" height="110" fill="#e0f2fe" stroke="#000" stroke-width="2" />
-                    <rect x="135" y="180" width="6" height="40" fill="#1e293b" rx="2" />
-                  </svg>
-                </div>
-                <div class="product-card-body">
-                  <h3>Heritage Stable Back Door</h3>
-                  <span class="product-colour-tag">Shown in Irish Oak Timber</span>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">Dual-opening horizontal split door allowing independent top ventilation.</p>
-                  <div class="product-card-specs"><span>⚡ A Rating</span><span>🛡️ PAS 24</span></div>
-                  <div class="product-card-footer">
-                    <a href="#/doors/heritage" class="btn btn-dark-outline btn-sm">View Details</a>
-                    <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','heritage')" class="btn btn-primary btn-sm">Design 3D</a>
+              <!-- RIGHT COLUMN: INTERACTIVE ACCORDION ITEMS -->
+              <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+                
+                <!-- ACCORDION ITEM 1 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">👁️</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">The door most people underestimate</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Back doors are frequently left unreinforced on conventional properties, making them easy targets. Rockdoor back doors use S-Glaze technology and high-density cores so your back entrance is as strong as a bank vault.
+                    </p>
                   </div>
                 </div>
+
+                <!-- ACCORDION ITEM 2 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">🛡️</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Thieves prefer the seclusion of the back</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Intruders choose hidden garden paths and rear patios where neighbors cannot see them. Multi-point steel hook locks, 3-star anti-snap cylinders, and carbon fibre reinforcers keep intruders out.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ACCORDION ITEM 3 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">🎨</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Your perfect back door, in a range of styles and colours</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Whether you prefer high-light full glass back doors, traditional leaded panes, or Chartwell Green cottage finishes, customize every detail in our 3D designer.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ACCORDION ITEM 4 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">🚪</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Stable doors: fresh air, safely</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Enjoy fresh garden breeze into your kitchen while keeping pets and young children securely inside with our dual-opening split stable door collection.
+                    </p>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>

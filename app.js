@@ -319,3 +319,19 @@ window.scrollReviewsCarousel = function(direction) {
     track.scrollBy({ left: direction * 280, behavior: 'smooth' });
   }
 };
+
+window.toggleBackAccordion = function(btn) {
+  const item = btn.closest('.back-accordion-item');
+  const content = item.querySelector('.acc-content');
+  const plus = item.querySelector('.acc-plus');
+  
+  if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+    content.style.maxHeight = '0px';
+    plus.style.transform = 'rotate(0deg)';
+  } else {
+    document.querySelectorAll('.back-accordion-item .acc-content').forEach(c => c.style.maxHeight = '0px');
+    document.querySelectorAll('.back-accordion-item .acc-plus').forEach(p => p.style.transform = 'rotate(0deg)');
+    content.style.maxHeight = content.scrollHeight + 'px';
+    plus.style.transform = 'rotate(45deg)';
+  }
+};

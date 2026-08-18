@@ -3231,3 +3231,10 @@ html, body {
     grid-template-columns: 1fr !important;
   }
 }
+
+@media (max-width: 900px) {
+  .back-doors-feature-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+}
