@@ -6,66 +6,66 @@
 class AppRouter {
   constructor() {
     this.routes = {
-      '/': { title: 'Vanguard Composite Doors | Style, Security & British Engineering', type: 'home' },
-      '/home': { title: 'Vanguard Composite Doors | Style, Security & British Engineering', type: 'home' },
+      '/': { title: 'Rockdoor Composite Doors | Manufacturer of Premium, Secure Composite Doors', type: 'home' },
+      '/home': { title: 'Rockdoor Composite Doors | Manufacturer of Premium, Secure Composite Doors', type: 'home' },
       
-      '/doors': { title: 'All Composite Doors Range | Vanguard Doors', type: 'page', category: 'doors', name: 'All Composite Doors' },
-      '/modern-doors': { title: 'Modern Composite Doors Range | Vanguard Doors', type: 'page', category: 'doors', name: 'Modern Doors' },
+      '/doors': { title: 'All Composite Doors Range | Rockdoor', type: 'page', category: 'doors', name: 'All Composite Doors' },
+      '/modern-doors': { title: 'Modern Composite Doors Range | Rockdoor', type: 'page', category: 'doors', name: 'Modern Doors' },
       
-      '/doors/front-doors': { title: 'Front Composite Doors | Vanguard Doors', type: 'page', category: 'doors', name: 'Front Entrance Doors' },
-      '/front-doors': { title: 'Front Composite Doors | Vanguard Doors', type: 'page', category: 'doors', name: 'Front Entrance Doors' },
+      '/doors/front-doors': { title: 'Front Composite Doors | Rockdoor', type: 'page', category: 'doors', name: 'Front Entrance Doors' },
+      '/front-doors': { title: 'Front Composite Doors | Rockdoor', type: 'page', category: 'doors', name: 'Front Entrance Doors' },
 
-      '/doors/back-doors': { title: 'Back Doors & Utility Entrances | Vanguard Doors', type: 'page', category: 'doors', name: 'Back Composite Doors' },
-      '/back-doors': { title: 'Back Doors & Utility Entrances | Vanguard Doors', type: 'page', category: 'doors', name: 'Back Composite Doors' },
+      '/doors/back-doors': { title: 'Back Doors & Utility Entrances | Rockdoor', type: 'page', category: 'doors', name: 'Back Composite Doors' },
+      '/back-doors': { title: 'Back Doors & Utility Entrances | Rockdoor', type: 'page', category: 'doors', name: 'Back Composite Doors' },
 
-      '/doors/double-doors': { title: 'Double Composite Doors | Vanguard Doors', type: 'page', category: 'doors', name: 'Double Entrance Doors' },
-      '/double-doors': { title: 'Double Composite Doors | Vanguard Doors', type: 'page', category: 'doors', name: 'Double Entrance Doors' },
+      '/doors/double-doors': { title: 'Double Composite Doors | Rockdoor', type: 'page', category: 'doors', name: 'Double Entrance Doors' },
+      '/double-doors': { title: 'Double Composite Doors | Rockdoor', type: 'page', category: 'doors', name: 'Double Entrance Doors' },
 
-      '/doors/french-doors': { title: 'French Composite Doors | Vanguard Doors', type: 'page', category: 'doors', name: 'French Composite Doors' },
-      '/french-doors': { title: 'French Composite Doors | Vanguard Doors', type: 'page', category: 'doors', name: 'French Composite Doors' },
+      '/doors/french-doors': { title: 'French Composite Doors | Rockdoor', type: 'page', category: 'doors', name: 'French Composite Doors' },
+      '/french-doors': { title: 'French Composite Doors | Rockdoor', type: 'page', category: 'doors', name: 'French Composite Doors' },
 
-      '/doors/stable-doors': { title: 'Stable Composite Doors | Vanguard Doors', type: 'page', category: 'doors', name: 'Stable Doors' },
-      '/stable-doors': { title: 'Stable Composite Doors | Vanguard Doors', type: 'page', category: 'doors', name: 'Stable Doors' },
+      '/doors/stable-doors': { title: 'Stable Composite Doors | Rockdoor', type: 'page', category: 'doors', name: 'Stable Doors' },
+      '/stable-doors': { title: 'Stable Composite Doors | Rockdoor', type: 'page', category: 'doors', name: 'Stable Doors' },
 
-      '/doors/cottage-doors': { title: 'Cottage Composite Doors | Vanguard Doors', type: 'page', category: 'doors', name: 'Cottage Composite Doors' },
-      '/cottage-doors': { title: 'Cottage Composite Doors | Vanguard Doors', type: 'page', category: 'doors', name: 'Cottage Composite Doors' },
+      '/doors/cottage-doors': { title: 'Cottage Composite Doors | Rockdoor', type: 'page', category: 'doors', name: 'Cottage Composite Doors' },
+      '/cottage-doors': { title: 'Cottage Composite Doors | Rockdoor', type: 'page', category: 'doors', name: 'Cottage Composite Doors' },
 
-      '/doors/arden': { title: 'Arden Modern Composite Door | Vanguard Doors', type: 'product', model: 'arden', name: 'Arden Modern Linear' },
-      '/doors/windsor': { title: 'Windsor Traditional Composite Door | Vanguard Doors', type: 'product', model: 'windsor', name: 'Windsor Traditional Arch' },
-      '/doors/malvern': { title: 'Malvern Cottage Composite Door | Vanguard Doors', type: 'product', model: 'malvern', name: 'Malvern Cottage Plank' },
-      '/doors/heritage': { title: 'Heritage Split Stable Door | Vanguard Doors', type: 'product', model: 'heritage', name: 'Heritage Split Stable' },
+      '/doors/arden': { title: 'Arden Modern Composite Door | Rockdoor', type: 'product', model: 'arden', name: 'Arden Modern Linear' },
+      '/doors/windsor': { title: 'Windsor Traditional Composite Door | Rockdoor', type: 'product', model: 'windsor', name: 'Windsor Traditional Arch' },
+      '/doors/malvern': { title: 'Malvern Cottage Composite Door | Rockdoor', type: 'product', model: 'malvern', name: 'Malvern Cottage Plank' },
+      '/doors/heritage': { title: 'Heritage Split Stable Door | Rockdoor', type: 'product', model: 'heritage', name: 'Heritage Split Stable' },
 
-      '/colours': { title: 'Colour Collections | Vanguard Composite Doors', type: 'page', category: 'colours', name: 'Architectural Colour Palette' },
-      '/colours/classic': { title: 'Classic Colours | Vanguard Doors', type: 'page', category: 'colours', name: 'Classic Heritage Colours' },
-      '/colours/modern': { title: 'Modern Architectural Colours | Vanguard Doors', type: 'page', category: 'colours', name: 'Modern Greys & Blacks' },
-      '/colours/trending': { title: 'Trending Door Colours | Vanguard Doors', type: 'page', category: 'colours', name: 'Trending Shades 2026' },
-      '/colours/wood': { title: 'Natural Timber Woodgrain Finishes | Vanguard Doors', type: 'page', category: 'colours', name: 'Woodgrain Timber Finishes' },
+      '/colours': { title: 'Colour Collections | Rockdoor Composite Doors', type: 'page', category: 'colours', name: 'Architectural Colour Palette' },
+      '/colours/classic': { title: 'Classic Colours | Rockdoor', type: 'page', category: 'colours', name: 'Classic Heritage Colours' },
+      '/colours/modern': { title: 'Modern Architectural Colours | Rockdoor', type: 'page', category: 'colours', name: 'Modern Greys & Blacks' },
+      '/colours/trending': { title: 'Trending Door Colours | Rockdoor', type: 'page', category: 'colours', name: 'Trending Shades 2026' },
+      '/colours/wood': { title: 'Natural Timber Woodgrain Finishes | Rockdoor', type: 'page', category: 'colours', name: 'Woodgrain Timber Finishes' },
 
-      '/styles': { title: 'Door Styles | Vanguard Composite Doors', type: 'page', category: 'styles', name: 'Door Styles & Designs' },
-      '/styles/modern': { title: 'Modern Contemporary Door Styles | Vanguard Doors', type: 'page', category: 'styles', name: 'Modern Style Collection' },
-      '/styles/traditional': { title: 'Traditional Door Styles | Vanguard Doors', type: 'page', category: 'styles', name: 'Traditional Style Collection' },
-      '/traditional-doors': { title: 'Traditional Composite Doors | Vanguard Doors', type: 'page', category: 'doors', name: 'Traditional Composite Doors' },
+      '/styles': { title: 'Door Styles | Rockdoor Composite Doors', type: 'page', category: 'styles', name: 'Door Styles & Designs' },
+      '/styles/modern': { title: 'Modern Contemporary Door Styles | Rockdoor', type: 'page', category: 'styles', name: 'Modern Style Collection' },
+      '/styles/traditional': { title: 'Traditional Door Styles | Rockdoor', type: 'page', category: 'styles', name: 'Traditional Style Collection' },
+      '/traditional-doors': { title: 'Traditional Composite Doors | Rockdoor', type: 'page', category: 'doors', name: 'Traditional Composite Doors' },
 
-      '/discover': { title: 'Discover Vanguard Engineering | Vanguard Doors', type: 'page', category: 'discover', name: 'Discover Vanguard Engineering' },
-      '/discover/unique-doors': { title: 'Unique Engineered Doors | Vanguard Doors', type: 'page', category: 'discover', name: 'Unique Engineered Doors' },
-      '/discover/custom-glass': { title: 'Customised Decorative Glass | Vanguard Doors', type: 'page', category: 'discover', name: 'Customised Security Glass' },
-      '/discover/colours': { title: 'Standout Durable Colours | Vanguard Doors', type: 'page', category: 'discover', name: 'Standout UV Resistant Colours' },
-      '/discover/security': { title: 'High Security Composite Doors | Vanguard Doors', type: 'page', category: 'discover', name: 'Advanced Security Engineering' },
-      '/discover/thermal-performance': { title: 'Thermal Performance & A+ Efficiency | Vanguard Doors', type: 'page', category: 'discover', name: 'A+ Rated Thermal Efficiency' },
+      '/discover': { title: 'Discover Rockdoor Engineering | Rockdoor', type: 'page', category: 'discover', name: 'Discover Rockdoor Engineering' },
+      '/discover/unique-doors': { title: 'Unique Engineered Doors | Rockdoor', type: 'page', category: 'discover', name: 'Unique Engineered Doors' },
+      '/discover/custom-glass': { title: 'Customised Decorative Glass | Rockdoor', type: 'page', category: 'discover', name: 'Customised Security Glass' },
+      '/discover/colours': { title: 'Standout Durable Colours | Rockdoor', type: 'page', category: 'discover', name: 'Standout UV Resistant Colours' },
+      '/discover/security': { title: 'High Security Composite Doors | Rockdoor', type: 'page', category: 'discover', name: 'Advanced Security Engineering' },
+      '/discover/thermal-performance': { title: 'Thermal Performance & A+ Efficiency | Rockdoor', type: 'page', category: 'discover', name: 'A+ Rated Thermal Efficiency' },
 
       '/inspiration': { title: 'Inspiration Gallery | Real Home Entrances', type: 'page', category: 'gallery', name: 'Inspiration Gallery' },
-      '/case-studies': { title: 'Real Homes. Real Doors. | Vanguard Case Studies', type: 'page', category: 'cases', name: 'Homeowner Case Studies' },
-      '/blog': { title: 'Latest News & Architectural Guides | Vanguard Blog', type: 'page', category: 'blog', name: 'Articles & Design Guides' },
-      '/brochures': { title: 'Download Official Brochures | Vanguard Doors', type: 'page', category: 'downloads', name: 'Brochures & Spec Sheets' },
-      '/faqs': { title: 'Frequently Asked Questions | Vanguard Doors', type: 'page', category: 'help', name: 'Frequently Asked Questions' },
-      '/prices': { title: 'Pricing Guide & Instant Estimates | Vanguard Doors', type: 'page', category: 'pricing', name: 'Composite Door Pricing Guide' },
-      '/installer-finder': { title: 'Find an Approved Local Installer | Vanguard Doors', type: 'page', category: 'installer', name: 'Approved Installer Directory' },
-      '/door-finder': { title: 'Interactive Door Style Finder Tool | Vanguard Doors', type: 'page', category: 'finder', name: 'Interactive Door Style Finder' },
-      '/door-designer': { title: '3D Interactive Door Designer | Vanguard Doors', type: 'page', category: 'designer', name: '3D Door Designer Studio' },
-      '/about': { title: 'About Vanguard Doors | British Engineering Heritage', type: 'page', category: 'about', name: 'About Vanguard Composite Doors' },
-      '/contact': { title: 'Contact Us | Vanguard Doors Support', type: 'page', category: 'contact', name: 'Contact Vanguard Customer Service' },
-      '/privacy-policy': { title: 'Privacy Policy | Vanguard Composite Doors', type: 'page', category: 'legal', name: 'Privacy Policy' },
-      '/terms-and-conditions': { title: 'Terms & Conditions | Vanguard Composite Doors', type: 'page', category: 'legal', name: 'Terms & Conditions' }
+      '/case-studies': { title: 'Real Homes. Real Doors. | Rockdoor Case Studies', type: 'page', category: 'cases', name: 'Homeowner Case Studies' },
+      '/blog': { title: 'Latest News & Architectural Guides | Rockdoor Blog', type: 'page', category: 'blog', name: 'Articles & Design Guides' },
+      '/brochures': { title: 'Download Official Brochures | Rockdoor', type: 'page', category: 'downloads', name: 'Brochures & Spec Sheets' },
+      '/faqs': { title: 'Frequently Asked Questions | Rockdoor', type: 'page', category: 'help', name: 'Frequently Asked Questions' },
+      '/prices': { title: 'Pricing Guide & Instant Estimates | Rockdoor', type: 'page', category: 'pricing', name: 'Composite Door Pricing Guide' },
+      '/installer-finder': { title: 'Find an Approved Local Installer | Rockdoor', type: 'page', category: 'installer', name: 'Approved Installer Directory' },
+      '/door-finder': { title: 'Interactive Door Style Finder Tool | Rockdoor', type: 'page', category: 'finder', name: 'Interactive Door Style Finder' },
+      '/door-designer': { title: '3D Interactive Door Designer | Rockdoor', type: 'page', category: 'designer', name: '3D Door Designer Studio' },
+      '/about': { title: 'About Rockdoor | British Engineering Heritage', type: 'page', category: 'about', name: 'About Rockdoor Composite Doors' },
+      '/contact': { title: 'Contact Us | Rockdoor Support', type: 'page', category: 'contact', name: 'Contact Rockdoor Customer Service' },
+      '/privacy-policy': { title: 'Privacy Policy | Rockdoor Composite Doors', type: 'page', category: 'legal', name: 'Privacy Policy' },
+      '/terms-and-conditions': { title: 'Terms & Conditions | Rockdoor Composite Doors', type: 'page', category: 'legal', name: 'Terms & Conditions' }
     };
 
     this.init();
@@ -105,7 +105,7 @@ class AppRouter {
     };
 
     const targetRoute = aliases[rawHash] || rawHash;
-    const routeObj = this.routes[targetRoute] || { title: 'Vanguard Composite Doors', type: 'page', name: 'Page Details' };
+    const routeObj = this.routes[targetRoute] || { title: 'Rockdoor Composite Doors', type: 'page', name: 'Page Details' };
 
     document.title = routeObj.title;
 
@@ -222,7 +222,7 @@ class AppRouter {
         <section class="journey-section" style="padding-top: 5rem;">
           <div class="container">
             <div class="section-header">
-              <span class="eyebrow">VANGUARD COMPOSITE DOORS</span>
+              <span class="eyebrow">ROCKDOOR COMPOSITE DOORS</span>
               <h1 class="section-title">${routeObj.name}</h1>
               <p class="section-subtitle">Engineered for home improvement excellence across Britain.</p>
             </div>

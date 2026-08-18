@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
   galleryItems.forEach(item => {
     item.addEventListener('click', () => {
       const img = item.querySelector('img')?.src;
-      const title = item.querySelector('.gallery-overlay h4')?.textContent || 'Vanguard Composite Door';
+      const title = item.querySelector('.gallery-overlay h4')?.textContent || 'Rockdoor Composite Door';
       const color = item.querySelector('.gallery-overlay p')?.textContent || 'Custom Architectural Finish';
 
       openModal(`
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const mockInstallers = [
     { name: 'Apex Premier Windows & Doors Ltd', distance: '1.4 miles away', rating: '4.9 ★ (184 reviews)', phone: '0800 456 7890', area: 'Central & Surrounding Areas' },
-    { name: 'Vanguard Elite Master Fitters', distance: '3.2 miles away', rating: '5.0 ★ (96 reviews)', phone: '0800 123 9988', area: 'Greater Region Direct' },
+    { name: 'Rockdoor Elite Master Fitters', distance: '3.2 miles away', rating: '5.0 ★ (96 reviews)', phone: '0800 123 9988', area: 'Greater Region Direct' },
     { name: 'Heritage Architectural Joinery', distance: '5.8 miles away', rating: '4.8 ★ (120 reviews)', phone: '0161 789 2211', area: 'Regional Master Installer' }
   ];
 
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let resultsHTML = `
       <div class="eyebrow">APPROVED INSTALLERS NEAR ${val}</div>
-      <h3 style="font-size: 1.75rem; color: var(--text-primary); margin-bottom: 1.5rem;">Trusted Vanguard Local Fitters</h3>
+      <h3 style="font-size: 1.75rem; color: var(--text-primary); margin-bottom: 1.5rem;">Trusted Rockdoor Local Fitters</h3>
       <div style="display: flex; flex-direction: column; gap: 1.25rem;">
     `;
 

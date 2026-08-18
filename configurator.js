@@ -1,5 +1,5 @@
 /* ==========================================================================
-   VANGUARD COMPOSITE DOORS - 3D INTERACTIVE DOOR CONFIGURATOR ENGINE
+   ROCKDOOR COMPOSITE DOORS - 3D INTERACTIVE DOOR CONFIGURATOR ENGINE
    Handles dynamic canvas/SVG rendering, style selection, color tinting,
    glass pattern overlays, hardware finish compositing, custom house photo uploader,
    and instant specification/quote modal triggers.
