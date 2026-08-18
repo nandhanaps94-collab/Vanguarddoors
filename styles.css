@@ -2820,36 +2820,57 @@ html, body {
   }
   
   .hero-header-overlay {
-    top: 10px;
-    padding: 0 12px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.65rem;
-  }
-  
-  .hero-brand-logo {
-    font-size: 1.125rem;
-  }
-  .hero-brand-logo svg {
-    height: 24px;
-    width: 24px;
-  }
-  
-  .hero-header-controls {
-    width: 100%;
+    top: 12px;
+    padding: 0 16px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+    grid-template-rows: auto auto;
+    gap: 0.75rem;
+    align-items: center;
+    box-sizing: border-box;
   }
   
-  .hero-btn-installer,
-  .hero-btn-help {
+  .hero-brand-logo-rockdoor {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    align-self: center;
+  }
+  .hero-brand-logo-rockdoor img {
+    height: 44px;
+    width: auto;
+  }
+
+  .hero-header-controls {
+    display: contents;
+  }
+  
+  .hero-btn-menu {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    align-self: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background: #FFFFFF;
+    color: #18191B;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .hero-btn-installer-glass,
+  .hero-btn-installer {
+    grid-column: 1;
+    grid-row: 2;
     width: 100%;
     height: 42px;
     padding: 0 0.5rem;
-    font-size: 0.78125rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-align: center;
     justify-content: center;
@@ -2857,13 +2878,25 @@ html, body {
     border-radius: 6px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     display: flex !important;
+    box-sizing: border-box;
   }
   
-  .hero-btn-hamburger {
-    width: 42px;
+  .hero-btn-purple,
+  .hero-btn-help {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
     height: 42px;
-    font-size: 1.25rem;
+    padding: 0 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
     border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    display: flex !important;
+    box-sizing: border-box;
   }
   
   .hero-section {
