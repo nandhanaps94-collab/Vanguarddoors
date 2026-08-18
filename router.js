@@ -1265,10 +1265,10 @@ class AppRouter {
       `;
     }
 
-    if (path === '/doors/french-doors') {
+    if (path === '/doors/french-doors' || path === '/french-doors') {
       return `
         <!-- FRENCH DOOR DEDICATED PHOTOGRAPHIC HERO SECTION -->
-        <section class="hero-section" style="height: 520px; min-height: 480px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
+        <section class="hero-section" style="height: 480px; min-height: 420px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
           <div class="hero-bg" style="position: absolute; inset: 0; z-index: 1;">
             <img src="assets/french_door_hero.jpg" alt="Natural Oak French Composite Doors with Side Lights" style="width: 100%; height: 100%; object-fit: cover; object-position: center center;" />
           </div>
@@ -1280,62 +1280,217 @@ class AppRouter {
             <p class="hero-subhead" style="font-size: 1.125rem; color: rgba(255,255,255,0.92); max-width: 660px; margin: 0 auto 1.75rem; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">
               Bring natural light into your home with elegant, high-security composite French doors featuring dual opening handles and full-height side lights.
             </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-              <a href="#/door-designer" class="btn btn-gold">Design French Doors in 3D</a>
-              <a href="#/installer-finder" class="btn btn-dark-outline" style="background: rgba(255,255,255,0.9); color: #171717; border-color: #FFFFFF;">Get Free Home Survey</a>
+          </div>
+        </section>
+
+        <!-- TOP CATEGORY TABS BAR -->
+        <div class="category-tabs-bar-rockdoor" style="padding: 1.5rem 0; background: var(--bg-main); border-bottom: 1px solid var(--border-subtle);">
+          <div class="container">
+            <div style="display: flex; gap: 2.25rem; overflow-x: auto; white-space: nowrap; scrollbar-width: none;">
+              <a href="#/front-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Front Doors</a>
+              <a href="#/back-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Back Doors</a>
+              <a href="#/french-doors" class="cat-tab-link active" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 700; color: var(--text-primary); text-decoration: none; border-bottom: 2px solid var(--text-primary); padding-bottom: 0.4rem;">French Doors</a>
+              <a href="#/double-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Double Doors</a>
+              <a href="#/stable-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Stable Doors</a>
+              <a href="#/cottage-doors" class="cat-tab-link" style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-decoration: none; padding-bottom: 0.4rem;">Cottage Doors</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 FRENCH DOOR PHOTO CARDS GRID -->
+        <section class="products-section" style="padding: 3.5rem 0 4rem; background-color: var(--bg-main);">
+          <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 1.5rem;" class="front-doors-grid-photo">
+              
+              <!-- CARD 1: Hudson -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/arden'">
+                <img src="assets/composite_doors_side.jpg" class="inspiration-card-img" alt="Hudson French Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Hudson</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 2: Vermont -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/arden'">
+                <img src="assets/collection_arden.jpg" class="inspiration-card-img" alt="Vermont French Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Vermont</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 3: Vogue -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/arden'">
+                <img src="assets/modern_doors_hero.jpg" class="inspiration-card-img" alt="Vogue French Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Vogue</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 4: Classic -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/windsor'">
+                <img src="assets/back_door_hero.png" class="inspiration-card-img" alt="Classic French Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Classic</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- ROW 2: Dune Vision, Byron, Warwick -->
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;" class="front-doors-grid-photo">
+              
+              <!-- CARD 5: Dune Vision -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/arden'">
+                <img src="assets/composite_doors_hero.jpg" class="inspiration-card-img" alt="Dune Vision French Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Modern</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Dune Vision</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 6: Byron -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/windsor'">
+                <img src="assets/story_victorian.jpg" class="inspiration-card-img" alt="Byron French Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Traditional</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Byron</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
+              <!-- CARD 7: Warwick -->
+              <div class="inspiration-card-rockdoor" style="height: 460px; cursor: pointer;" onclick="window.location.hash='#/doors/windsor'">
+                <img src="assets/front_door_hero.jpg" class="inspiration-card-img" alt="Warwick French Door" />
+                <div class="inspiration-card-gradient"></div>
+                <div class="inspiration-card-top">
+                  <span class="browse-badge-glass">Traditional</span>
+                </div>
+                <div class="inspiration-card-bottom" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%;">
+                  <h3 class="inspiration-card-name" style="font-size: 1.35rem; font-weight: 700; margin: 0; text-shadow: 0 2px 8px rgba(0,0,0,0.6);">Warwick</h3>
+                  <span class="inspiration-plus-btn" style="border-radius: 20px; padding: 0.35rem 0.85rem; width: auto; height: auto; font-size: 0.75rem; font-weight: 600;">Explore ↗</span>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>
 
-        <!-- INTERACTIVE FILTERS & PRODUCT GRID -->
-        <section class="products-section" style="padding: 4rem 0;">
+        <!-- FRENCH DOOR FEATURE ACCORDION SECTION (MATCHING BENCHMARK SCREENSHOT 2) -->
+        <section class="french-doors-feature-section" style="padding: 5.5rem 0 6.5rem; background-color: var(--bg-main); border-top: 1px solid var(--border-subtle);">
           <div class="container">
-            <div style="background: var(--bg-white); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1.5rem; margin-bottom: 3rem; display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center;">
-              <strong style="font-size: 0.875rem; color: var(--text-primary);">Filter French Doors:</strong>
-              <button class="tab-btn active" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display='flex');">All French Doors</button>
-              <button class="tab-btn" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display = c.dataset.category === 'timber-look' ? 'flex' : 'none');">Natural Timber</button>
-              <button class="tab-btn" onclick="this.parentNode.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); this.classList.add('active'); document.querySelectorAll('.product-card').forEach(c=>c.style.display = c.dataset.category === 'modern' ? 'flex' : 'none');">Contemporary Grey</button>
-            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start;" class="back-doors-feature-grid">
+              
+              <!-- LEFT COLUMN: TITLE & 4 LOCKING SYSTEMS STAT BADGE -->
+              <div>
+                <span class="eyebrow" style="color: var(--text-muted); font-size: 0.75rem; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 0.5rem;">Composite French doors</span>
+                <h2 style="font-family: var(--font-sans); font-size: clamp(2.25rem, 3.8vw, 3.25rem); font-weight: 700; color: var(--text-primary); line-height: 1.15; margin-bottom: 1.5rem;">
+                  How are Rockdoor<br />French doors so strong?
+                </h2>
+                <p style="font-family: var(--font-sans); font-size: 0.9375rem; line-height: 1.65; color: var(--text-secondary); max-width: 480px; margin-bottom: 2.5rem;">
+                  Not ours. Independent tests agree Rockdoor French doors are secure — and we've pushed them well beyond what the industry requires.
+                </p>
 
-            <div class="products-grid">
-              <div class="product-card" data-category="timber-look">
-                <div class="product-card-image">
-                  <span class="product-badge">TIMBER GRAIN</span>
-                  <img src="assets/french_door_hero.jpg" alt="Natural Golden Oak Composite French Doors" style="width: 100%; height: 100%; object-fit: cover;" />
-                </div>
-                <div class="product-card-body">
-                  <h3>Golden Oak French Doors</h3>
-                  <span class="product-colour-tag">Shown in Golden Oak with Matching Side Lights</span>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">Dual active French leaves with long vertical glazed apertures and brushed steel lever handles.</p>
-                  <div class="product-card-specs"><span>⚡ A+ Energy</span><span>🛡️ PAS 24</span></div>
-                  <div class="product-card-footer">
-                    <a href="#/doors/arden" class="btn btn-dark-outline btn-sm">View Details</a>
-                    <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','arden')" class="btn btn-primary btn-sm">Design 3D</a>
-                  </div>
+                <!-- 4 LOCKING SYSTEMS STAT BADGE CARD -->
+                <div style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1.25rem; max-width: 420px; box-shadow: 0 2px 10px rgba(0,0,0,0.04);">
+                  <span style="font-family: var(--font-sans); font-size: 2.25rem; font-weight: 800; color: var(--text-primary); line-height: 1;">4</span>
+                  <span style="font-family: var(--font-sans); font-size: 0.8125rem; line-height: 1.35; color: var(--text-secondary); font-weight: 500;">locking systems working together: shoot bolts, zinc hooks, hinges and dog bolts</span>
                 </div>
               </div>
 
-              <div class="product-card" data-category="modern">
-                <div class="product-card-image">
-                  <span class="product-badge">MODERN FAVOURITE</span>
-                  <svg viewBox="0 0 160 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="10" y="10" width="140" height="300" fill="#2f353b" rx="4" />
-                    <rect x="25" y="30" width="30" height="100" fill="#e0f2fe" stroke="#000" stroke-width="2" />
-                    <rect x="65" y="30" width="30" height="100" fill="#e0f2fe" stroke="#000" stroke-width="2" />
-                    <rect x="105" y="30" width="30" height="100" fill="#e0f2fe" stroke="#000" stroke-width="2" />
-                    <rect x="135" y="150" width="6" height="40" fill="#e2e8f0" rx="2" />
-                  </svg>
-                </div>
-                <div class="product-card-body">
-                  <h3>Anthracite Grey French Doors</h3>
-                  <span class="product-colour-tag">Shown in Anthracite Grey (RAL 7016)</span>
-                  <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1rem;">Clean modern profiles with high thermal glass performance.</p>
-                  <div class="product-card-specs"><span>⚡ A Rating</span><span>🛡️ PAS 24</span></div>
-                  <div class="product-card-footer">
-                    <a href="#/doors/arden" class="btn btn-dark-outline btn-sm">View Details</a>
-                    <a href="#/door-designer" onclick="window.doorConfigurator?.setState('style','arden')" class="btn btn-primary btn-sm">Design 3D</a>
+              <!-- RIGHT COLUMN: INTERACTIVE ACCORDION ITEMS -->
+              <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+                
+                <!-- ACCORDION ITEM 1 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">🚪</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">The vulnerable doorway, solved</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Traditional French doors were weak at the central opening. Rockdoor solves this with independent locking hooks, shoot bolts, and carbon fibre structure in both leaves.
+                    </p>
                   </div>
                 </div>
+
+                <!-- ACCORDION ITEM 2 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">🛡️</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Tested independently, then tested harder</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Subjected to rigorous burglary attacks, extreme gale tests, and thermal heat exposure, Rockdoor French doors exceed PAS 24 standards.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ACCORDION ITEM 3 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">🏋️</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">How are they so strong?</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Built with inner high-density polyurethane core, S-Glazed toughened glass unit, and multi-point zinc-plated deadbolts embedded in outer frames.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- ACCORDION ITEM 4 -->
+                <div class="back-accordion-item" style="background: #FFFFFF; border: 1px solid var(--border-subtle); border-radius: 8px; overflow: hidden; transition: all 0.3s ease;">
+                  <button onclick="toggleBackAccordion(this)" style="width: 100%; padding: 1.25rem 1.5rem; background: none; border: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                      <span style="width: 38px; height: 38px; border-radius: 6px; background: #F7F6F2; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; color: var(--text-primary);">☀️</span>
+                      <span style="font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">Large glass panels, modern energy standards</span>
+                    </div>
+                    <span class="acc-plus" style="font-size: 1.35rem; font-weight: 400; color: var(--text-muted); transition: transform 0.3s ease;">+</span>
+                  </button>
+                  <div class="acc-content" style="max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 1.5rem;">
+                    <p style="font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); padding-bottom: 1.25rem; margin: 0;">
+                      Floods your living room or dining garden patio with sunlight while insulating heat inside to keep energy bills low year-round.
+                    </p>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
