@@ -1916,28 +1916,194 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   PRODUCT INNOVATION SECTION (Secondary Warm Background: #F1F0EB)
+   INSPIRATION GALLERY ("BE INSPIRED" - ROCKDOOR BENCHMARK SCREENSHOT 2)
    ========================================================================== */
+.inspiration-section-rockdoor,
 .innovation-section {
-  padding: 7rem 0;
-  background-color: var(--bg-secondary);
-  border-top: 1px solid var(--border-subtle);
+  padding: 5rem 0 6rem;
+  background-color: var(--bg-main);
   border-bottom: 1px solid var(--border-subtle);
 }
 
-.innovation-row {
+.inspiration-header-flex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.inspiration-title-text {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.inspiration-title-text .highlight-bold {
+  font-weight: 700;
+}
+
+.inspiration-view-link {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.inspiration-view-link:hover {
+  opacity: 0.7;
+}
+
+.inspiration-carousel-relative {
+  position: relative;
+}
+
+.inspiration-grid-rockdoor {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.inspiration-grid-rockdoor::-webkit-scrollbar {
+  display: none;
+}
+
+.inspiration-card-rockdoor {
+  position: relative;
+  height: 480px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.inspiration-card-rockdoor:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.inspiration-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.inspiration-card-rockdoor:hover .inspiration-card-img {
+  transform: scale(1.06);
+}
+
+.inspiration-card-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.02) 40%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  z-index: 2;
+}
+
+.inspiration-badge-top {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.inspiration-plus-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: flex;
   align-items: center;
-  margin-bottom: 5rem;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background 0.3s ease;
 }
 
-.innovation-row:nth-child(even) {
-  direction: rtl;
+.inspiration-plus-btn.active-purple {
+  background: #7c3aed;
+  border: none;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
 }
 
-.innovation-row:nth-child(even) .innovation-content {
+.inspiration-card-rockdoor:hover .inspiration-plus-btn:not(.active-purple) {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.inspiration-card-bottom {
+  position: relative;
+  z-index: 5;
+}
+
+.inspiration-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.inspiration-card-name {
+  font-family: var(--font-sans);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.1;
+  margin: 0 0 0.15rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.inspiration-color-name {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .inspiration-grid-rockdoor {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .inspiration-grid-rockdoor {
+    grid-template-columns: 1fr;
+  }
+  .inspiration-card-rockdoor {
+    height: 400px;
+  }
+}
   direction: ltr;
 }
 

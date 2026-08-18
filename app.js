@@ -305,3 +305,10 @@ window.scrollBrowseCarousel = function(direction) {
     track.scrollBy({ left: direction * 320, behavior: 'smooth' });
   }
 };
+
+window.scrollInspirationCarousel = function(direction) {
+  const track = document.getElementById('inspiration-carousel-track');
+  if (track) {
+    track.scrollBy({ left: direction * 320, behavior: 'smooth' });
+  }
+};

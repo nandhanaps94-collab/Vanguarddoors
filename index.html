@@ -7,7 +7,7 @@
   <meta name="description" content="Rockdoor is a leading UK manufacturer of premium composite doors, offering unmatched security, style and thermal performance. Find your ideal door now.">
   
   <!-- CSS Design System -->
-  <link rel="stylesheet" href="styles.css?v=8.0.0">
+  <link rel="stylesheet" href="styles.css?v=9.0.0">
 </head>
 <body>
 
@@ -729,52 +729,94 @@
     </section>
 
     <!-- ==========================================================================
-         12. PRODUCT FEATURE / INNOVATION SECTION
+         12. INSPIRATION GALLERY ("BE INSPIRED" - ROCKDOOR EXACT BENCHMARK)
          ========================================================================== -->
-    <section class="innovation-section">
+    <section class="inspiration-section-rockdoor">
       <div class="container">
-        <div class="section-header">
-          <span class="eyebrow">ENGINEERING INNOVATION</span>
-          <h2 class="section-title">Built like no other composite door</h2>
-        </div>
-
-        <!-- Row 1: Unique Designs -->
-        <div class="innovation-row">
-          <div class="innovation-image">
-            <img src="assets/hero_composite_door.jpg" alt="Unique Door Craftsmanship" />
+        <div class="inspiration-header-flex">
+          <div>
+            <span class="eyebrow" style="color: var(--text-muted); font-size: 0.75rem; display: block; margin-bottom: 0.35rem; letter-spacing: 0.15em;">INSPIRATION GALLERY</span>
+            <h2 class="inspiration-title-text">Be <span class="highlight-bold">inspired</span></h2>
           </div>
-          <div class="innovation-content">
-            <span class="eyebrow">01 • CNC PRECISION</span>
-            <h3>Unique Architectural Designs</h3>
-            <p>Every door slab is milled using multi-axis CNC machines to achieve crisp shadow gaps, period mouldings and geometric panel alignment.</p>
-            <a href="#/discover/unique-doors" class="btn btn-secondary">Discover Unique Designs</a>
+          <div>
+            <a href="#/gallery" class="inspiration-view-link">View full gallery</a>
           </div>
         </div>
 
-        <!-- Row 2: Custom Glass -->
-        <div class="innovation-row">
-          <div class="innovation-image">
-            <img src="assets/hero_composite_door.jpg" alt="Handcrafted Custom Glass" />
-          </div>
-          <div class="innovation-content">
-            <span class="eyebrow">02 • HANDCRAFTED ARTISTRY</span>
-            <h3>Customised Security Glass</h3>
-            <p>Hand-assembled decorative bevels, genuine lead work and sandblasted privacy etchings created by master glass artisans.</p>
-            <a href="#/discover/custom-glass" class="btn btn-secondary">Explore Custom Glass</a>
-          </div>
-        </div>
+        <div class="inspiration-carousel-relative">
+          <button class="carousel-arrow left" onclick="scrollInspirationCarousel(-1)" aria-label="Previous">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
 
-        <!-- Row 3: Thermal Performance -->
-        <div class="innovation-row">
-          <div class="innovation-image">
-            <img src="assets/hero_composite_door.jpg" alt="Thermal Insulation Core" />
+          <div id="inspiration-carousel-track" class="inspiration-grid-rockdoor">
+            <!-- Card 1: Byron White -->
+            <div class="inspiration-card-rockdoor" onclick="window.location.hash='#/gallery'">
+              <img src="assets/story_victorian.jpg" class="inspiration-card-img" alt="Byron White Inspiration" />
+              <div class="inspiration-card-gradient"></div>
+              
+              <div class="inspiration-badge-top">
+                <span class="inspiration-plus-btn">+</span>
+              </div>
+              
+              <div class="inspiration-card-bottom">
+                <span class="inspiration-eyebrow">INSPIRATION</span>
+                <h3 class="inspiration-card-name">Byron</h3>
+                <span class="inspiration-color-name">White</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Newark Agate Grey (Active Purple Badge) -->
+            <div class="inspiration-card-rockdoor" onclick="window.location.hash='#/gallery'">
+              <img src="assets/hero_composite_door.jpg" class="inspiration-card-img" alt="Newark Agate Grey Inspiration" />
+              <div class="inspiration-card-gradient"></div>
+              
+              <div class="inspiration-badge-top">
+                <span class="inspiration-plus-btn active-purple">+</span>
+              </div>
+              
+              <div class="inspiration-card-bottom">
+                <span class="inspiration-eyebrow">INSPIRATION</span>
+                <h3 class="inspiration-card-name">Newark</h3>
+                <span class="inspiration-color-name">Agate Grey</span>
+              </div>
+            </div>
+
+            <!-- Card 3: Hudson White -->
+            <div class="inspiration-card-rockdoor" onclick="window.location.hash='#/gallery'">
+              <img src="assets/story_contemporary.jpg" class="inspiration-card-img" alt="Hudson White Inspiration" />
+              <div class="inspiration-card-gradient"></div>
+              
+              <div class="inspiration-badge-top">
+                <span class="inspiration-plus-btn">+</span>
+              </div>
+              
+              <div class="inspiration-card-bottom">
+                <span class="inspiration-eyebrow">INSPIRATION</span>
+                <h3 class="inspiration-card-name">Hudson</h3>
+                <span class="inspiration-color-name">White</span>
+              </div>
+            </div>
+
+            <!-- Card 4: Byron White -->
+            <div class="inspiration-card-rockdoor" onclick="window.location.hash='#/gallery'">
+              <img src="assets/back_door_hero.png" class="inspiration-card-img" alt="Byron White Cottage Inspiration" />
+              <div class="inspiration-card-gradient"></div>
+              
+              <div class="inspiration-badge-top">
+                <span class="inspiration-plus-btn">+</span>
+              </div>
+              
+              <div class="inspiration-card-bottom">
+                <span class="inspiration-eyebrow">INSPIRATION</span>
+                <h3 class="inspiration-card-name">Byron</h3>
+                <span class="inspiration-color-name">White</span>
+              </div>
+            </div>
           </div>
-          <div class="innovation-content">
-            <span class="eyebrow">03 • A+ THERMAL CORE</span>
-            <h3>Unrivalled Thermal Insulation</h3>
-            <p>Save up to £240 per year on heating bills. Our 50mm high-density core prevents cold draughts and retains internal home warmth.</p>
-            <a href="#/discover/thermal-performance" class="btn btn-secondary">Thermal Performance Details</a>
-          </div>
+
+          <button class="carousel-arrow right" onclick="scrollInspirationCarousel(1)" aria-label="Next">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -1087,9 +1129,9 @@
   </footer>
 
   <!-- JavaScript Libraries & App Engine -->
-  <script src="configurator.js?v=8.0.0"></script>
-  <script src="router.js?v=8.0.0"></script>
-  <script src="app.js?v=8.0.0"></script>
+  <script src="configurator.js?v=9.0.0"></script>
+  <script src="router.js?v=9.0.0"></script>
+  <script src="app.js?v=9.0.0"></script>
 
 </body>
 </html>
