@@ -177,7 +177,7 @@ class AppRouter {
       pageHTML = this.renderDoorsPage(routeObj, '/doors/back-doors');
     } else if (path === '/double-doors') {
       pageHTML = this.renderDoorsPage(routeObj, '/doors/double-doors');
-    } else if (path === '/french-doors') {
+    } else if (path === '/french-doors' || path.includes('french')) {
       pageHTML = this.renderDoorsPage(routeObj, '/doors/french-doors');
     } else if (path === '/stable-doors') {
       pageHTML = this.renderDoorsPage(routeObj, '/doors/stable-doors');
@@ -1265,7 +1265,7 @@ class AppRouter {
       `;
     }
 
-    if (path === '/doors/french-doors' || path === '/french-doors') {
+    if (path === '/doors/french-doors' || path === '/french-doors' || path.includes('french')) {
       return `
         <!-- FRENCH DOOR DEDICATED PHOTOGRAPHIC HERO SECTION -->
         <section class="hero-section" style="height: 480px; min-height: 420px; position: relative; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 3.5rem; overflow: hidden; background: #171717;">
