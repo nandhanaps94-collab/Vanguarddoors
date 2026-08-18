@@ -1963,12 +1963,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .inspiration-grid-rockdoor {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: 1.25rem;
   overflow-x: auto;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
   scrollbar-width: none;
+  padding-bottom: 0.5rem;
 }
 
 .inspiration-grid-rockdoor::-webkit-scrollbar {
@@ -1977,6 +1978,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .inspiration-card-rockdoor {
   position: relative;
+  flex: 0 0 clamp(270px, 23.5vw, 320px);
   height: 480px;
   border-radius: 8px;
   overflow: hidden;
@@ -1986,6 +1988,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1.25rem;
   color: #FFFFFF;
   cursor: pointer;
+  scroll-snap-align: start;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
